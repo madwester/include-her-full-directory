@@ -78,7 +78,7 @@ NAVBAR
 
 .nav-link {
   font-family: "Roboto Mono", monospace;
-  margin: 10px;
+  margin: 15px;
   color: #000 !important; }
 
 .navBtn {
@@ -105,12 +105,14 @@ NAVBAR
     padding: 5px;
     margin: 5px; } }
 
-.menu-item-121, .menu-item-53 {
+.menu-item-121 a, .menu-item-53 a {
   background-color: #E4BCB2;
   border-radius: 5px; }
 
 .dropdown-item {
-  font-family: "Roboto Mono", monospace; }
+  font-family: "Roboto Mono", monospace;
+  background-color: white !important;
+  color: black; }
 
 /*-----------------------
 FEATURE

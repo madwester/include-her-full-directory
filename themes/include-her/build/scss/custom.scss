@@ -90,8 +90,9 @@ NAVBAR
 }
 .nav-link {
   font-family: $roboto-mono; 
-  margin: 10px;
+  margin: 15px;
   color: $black!important;
+  //padding: 0;
 }
 .navBtn {
   display: block;
@@ -127,11 +128,16 @@ NAVBAR
   }
 }
 .menu-item-121, .menu-item-53 {
+  a {
     background-color: $brandPink;
     border-radius: 5px;
+  }
 }
+
 .dropdown-item {
   font-family: $roboto-mono;
+  background-color: white!important;
+  color: black;
 }
 /*-----------------------
 FEATURE
