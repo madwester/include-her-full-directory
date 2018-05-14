@@ -1,0 +1,83 @@
+// =============================================================================
+// Media Queries
+// =============================================================================
+
+@mixin media($queryString){
+    @media #{$queryString} {
+      @content;
+    }
+}
+
+@mixin ipad {
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+    @content;
+  }
+}
+
+@mixin iphone {
+  @media only screen and (min-device-width : 320px) and (max-device-width : 736px)  {
+    @content;
+  }
+}
+
+// =============================================================================
+// Styles
+// =============================================================================
+
+@mixin ease-animation($seconds) {
+    -webkit-transition: all $seconds ease-in-out;
+    -moz-transition: all $seconds ease-in-out;
+    -ms-transform: all $seconds ease-in-out;
+    -o-transition: all $seconds ease-in-out;
+    transition: all $seconds ease-in-out;
+}
+
+@mixin transition($transition...) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transform: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+@mixin background-size($size){
+    -webkit-background-size: $size;
+    -moz-background-size: $size;
+    -ms-background-size: $size;
+    -o-background-size: $size;
+    background-size: $size;
+}
+
+@mixin rotate($rotate) {
+    -webkit-transform: rotate($rotate);
+    -moz-transform: rotate($rotate);
+    -ms-transform: rotate($rotate);
+    -o-transform: rotate($rotate);
+    transform: rotate($rotate);
+}
+
+@mixin transform($transform) {
+    -webkit-transform: $transform;
+    -moz-transform: $transform;
+    -ms-transform: $transform;
+    -o-transform: $transform;
+    transform: $transform;
+}
+
+@mixin border-radius($border-radius) {
+    -webkit-border-radius: $border-radius;
+    -moz-border-radius: $border-radius;
+    -ms-border-radius: $border-radius;
+    -o-border-radius: $border-radius;
+    border-radius: $border-radius;
+}
+
+@mixin box-shadow($box-shadow...) {
+    -webkit-box-shadow: $box-shadow;
+       -moz-box-shadow: $box-shadow;
+            box-shadow: $box-shadow;
+}
+@mixin reset(){
+    padding: 0;
+    margin: 0;
+}
