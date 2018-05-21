@@ -18,6 +18,9 @@ a {
 ul {
   padding: 0;
 }
+li {
+  list-style: none;
+}
 .align-right {
   text-align: right;
 }
@@ -164,6 +167,12 @@ FEATURE
 }
 .featureAbout {
   background-image: url('../../build/images/feature-image-two-girls.png'); 
+}
+.featureContact {
+  background-image: url('../../build/images/feature-image-contact.jpg'); 
+  h1 {
+    text-transform: uppercase;
+  }
 }
 .featureBtn {
   margin: 30px;
@@ -453,6 +462,7 @@ FORUM PAGE
 /*-----------------------
 PROFILE PAGE
 -----------------------*/
+
 #item-header {
   margin-bottom: 30px;
   background-color: #f0f0f0;
@@ -515,4 +525,31 @@ PROFILE PAGE
   padding: 7px 12px;
   background-color: $brandPink;
   color: black;
+}
+
+/*-----------------------
+CONTACT PAGE
+-----------------------*/
+
+.leftItemContact {
+  padding: 70px 15px;
+  text-align: center;
+  h2 {
+    text-transform: uppercase;
+    font-family: $oswald;
+    font-size: 1.6em;
+    margin-bottom: 20px;
+  }
+  ul {
+    margin: 0;  
+    li {
+      margin: 10px 0;
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+.rightItemContact {
+  padding: 50px;
 }

@@ -16,6 +16,9 @@ a {
 ul {
   padding: 0; }
 
+li {
+  list-style: none; }
+
 .align-right {
   text-align: right; }
 
@@ -136,6 +139,11 @@ FEATURE
 
 .featureAbout {
   background-image: url("../../build/images/feature-image-two-girls.png"); }
+
+.featureContact {
+  background-image: url("../../build/images/feature-image-contact.jpg"); }
+  .featureContact h1 {
+    text-transform: uppercase; }
 
 .featureBtn {
   margin: 30px;
@@ -443,3 +451,24 @@ PROFILE PAGE
   padding: 7px 12px;
   background-color: #E4BCB2;
   color: black; }
+
+/*-----------------------
+CONTACT PAGE
+-----------------------*/
+.leftItemContact {
+  padding: 70px 15px;
+  text-align: center; }
+  .leftItemContact h2 {
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.6em;
+    margin-bottom: 20px; }
+  .leftItemContact ul {
+    margin: 0; }
+    .leftItemContact ul li {
+      margin: 10px 0; }
+      .leftItemContact ul li i {
+        margin-right: 10px; }
+
+.rightItemContact {
+  padding: 50px; }
