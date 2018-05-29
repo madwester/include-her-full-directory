@@ -9,7 +9,7 @@ Template Name: About Us
 <main>  
     <div class="container">
         <div class="contentAbout">
-            <h1>Who are we?</h1>
+            <h1>Our story</h1>
             <p>Include her is an online community where people with the same interest of coding can socialize, 
             learn and inspire each other. It doesn't matter if you are a girl, a boy or another gender, 
             anyone is welcome but unlikely many other coding communities, most of our members are girls. 

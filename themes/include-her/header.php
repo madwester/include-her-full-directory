@@ -16,7 +16,9 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="profile" href="http://gmpg.org/xfn/11">
-
+	<link rel="icon" type="image/png" href="build/images/favicons/favicon-includeher1616.png" sizes="16x16">  
+	<link rel="icon" type="image/png" href="build/images/favicons/favicon-includeher3232.png" sizes="32x32">  
+	<link rel="icon" type="image/png" href="build/images/favicons/favicon-includeher.png" sizes="96x96">  			
 	<?php wp_head(); ?>
 </head>
 

@@ -19,6 +19,8 @@ Template Name: Contact Us
                 </ul>
             </div>
             <div class="col-md-9 rightItemContact">
+                <h2>We cannot wait to hear from you!</h2>
+                <h6>We normally reply on weekdays, within 24 hours.</h6>
                 <?php echo do_shortcode( '[contact-form-7 id="129" title="Main Contact Form"]' ); ?>
             </div>
         </div>

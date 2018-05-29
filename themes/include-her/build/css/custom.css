@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Caveat+Brush|Oswald|Nanum+Pen+Script|Rancho|Roboto|Roboto+Mono:400,500|Roboto+Condensed|Covered+By+Your+Grace|Lato|Reenie+Beanie|Abril+Fatface|Allura|Pacifico|Sacramento|Montserrat|Raleway|Monoton");
+/*-----------------------
+GENERICS
+-----------------------*/
 button, h1 {
   font-family: "Oswald", sans-serif;
   -webkit-transition: all 0.3s ease-in-out;
@@ -28,8 +31,26 @@ li {
 main {
   margin: 0; }
 
-.current-menu-item a {
-  border-bottom: 1px solid black; }
+.blue {
+  background-color: #222D63;
+  color: #fff; }
+  .blue a {
+    color: #fff; }
+
+.pink {
+  background-color: #E4BCB2; }
+
+.yellow {
+  background-color: #f8da79; }
+
+.gray {
+  background-color: #d5d5d5; }
+
+/*-----------------------
+Background colors main
+-----------------------*/
+.page-template-contact {
+  background-color: #d5d5d5; }
 
 .page-template-about {
   background-color: #E4BCB2; }
@@ -47,14 +68,20 @@ main {
   background-position: top; }
 
 .bbpress, .page-id-85 {
-  background-color: #E7C967; }
+  background-color: #f8da79; }
 
 .bp-user {
   background-color: #E4BCB2; }
 
+.event-template-default, .events {
+  background-color: #222D63; }
+
 /*-----------------------
 NAVBAR
 -----------------------*/
+.current-menu-item a {
+  border-bottom: 1px solid black; }
+
 .navbar-light .navbar-toggler {
   color: #000;
   background-color: transparent;
@@ -110,19 +137,20 @@ NAVBAR
 
 .menu-item-121 a, .menu-item-53 a {
   background-color: #E4BCB2;
-  border-radius: 5px; }
+  border-radius: 5px;
+  border-bottom: 0; }
 
 .dropdown-item {
   font-family: "Roboto Mono", monospace;
   background-color: white !important;
   color: black; }
 
-/*-----------------------
-FEATURE
------------------------*/
-.containerHome {
-  margin-bottom: 100px; }
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 10px 15px !important; }
 
+/*-----------------------
+FEATURE (TOP IMAGE ON EVERY PAGE)
+-----------------------*/
 .feature {
   padding: 300px;
   text-align: center;
@@ -147,7 +175,6 @@ FEATURE
 
 .featureBtn {
   margin: 30px;
-  background-color: #E4BCB2;
   border-radius: 7px;
   color: #fff;
   text-transform: uppercase;
@@ -164,20 +191,12 @@ FEATURE
     font-size: 1.2em;
     padding: 10px 20px; } }
 
-.blue {
-  background-color: #222D63;
-  color: #fff; }
-  .blue a {
-    color: #fff; }
-
-.pink {
-  background-color: #E4BCB2; }
-
-.yellow {
-  background-color: #E7C967; }
-
-.gray {
-  background-color: #d5d5d5; }
+/*-----------------------
+HOME PAGE 
+-----------------------*/
+.containerHome {
+  margin-bottom: 100px;
+  padding: 0; }
 
 .flexRow {
   display: flex;
@@ -187,14 +206,17 @@ FEATURE
   .flexRow {
     flex-direction: column; } }
 
+.whiteDiv {
+  height: 400px;
+  background-color: white; }
+
 .homepageItem {
-  height: 350px;
-  margin: 20px 20px 0 20px;
-  padding: 50px;
+  height: 450px;
+  padding: 120px;
   font-size: 1.2em;
-  -webkit-box-shadow: 2px 2px 3px 0px #b8b8b8;
-  -moz-box-shadow: 2px 2px 3px 0px #b8b8b8;
-  box-shadow: 2px 2px 3px 0px #b8b8b8; }
+  width: 50%;
+  font-family: "Oswald", sans-serif;
+  text-align: center; }
   .homepageItem a {
     text-transform: uppercase;
     font-weight: 500;
@@ -202,27 +224,78 @@ FEATURE
     letter-spacing: 2px; }
   .homepageItem i {
     margin-left: 10px; }
+  .homepageItem h2 {
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    font-size: 2.2em; }
+  .homepageItem h4 {
+    font-family: "Roboto Mono", monospace;
+    margin: 10px 0 30px 0;
+    font-size: 1.1em; }
+  .homepageItem h5 {
+    font-family: "Roboto Mono", monospace;
+    margin: 10px 0 30px 0;
+    font-size: 1.3em; }
 
-.homepageItem.large {
-  width: 65%; }
+.homepageBtn {
+  padding: 10px 20px;
+  background-color: transparent;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase; }
 
-.homepageItem.small {
-  width: 35%; }
+.homepageBtnYellow {
+  border: 2px solid #f8da79;
+  color: #f8da79; }
+
+.homepageBtnGray {
+  border: 2px solid #d5d5d5;
+  color: #d5d5d5; }
+
+.homepageBtnWhite {
+  border: 2px solid #fff;
+  color: #fff; }
+
+.homepageBtnBlack {
+  border: 2px solid #000;
+  color: #000; }
 
 @media only screen and (min-width: 767px) and (max-width: 991px) {
   .homepageItem {
     padding: 20px;
     font-size: 0.9em;
     margin: 10px 5px;
-    height: 270px; } }
+    height: 270px;
+    color: #fff; } }
 
 @media only screen and (max-width: 766px) {
   .homepageItem {
-    margin: 10px 0; }
-  .homepageItem.large {
-    width: 100%; }
-  .homepageItem.small {
-    width: 100%; } }
+    margin: 10px 0; } }
+
+.contactItem {
+  background-image: url("../../build/images/hp-items/hp-item9.jpg");
+  color: #d5d5d5; }
+
+.forumItem {
+  background-image: url("../../build/images/hp-items/hp-item7.jpg");
+  color: #f8da79; }
+
+/*-----------------------
+ABOUT
+-----------------------*/
+.carousel {
+  height: 300px;
+  margin: 60px 0; }
+
+.carousel-item {
+  color: white;
+  text-align: center;
+  height: 300px;
+  padding: 70px 100px; }
+  .carousel-item h2 {
+    font-family: "Oswald", sans-serif;
+    margin-bottom: 15px; }
+  .carousel-item h4 {
+    font-family: "Roboto Mono", monospace; }
 
 /*-----------------------
 ABOUT
@@ -306,7 +379,7 @@ LOGIN PAGE
   border: 0; }
 
 .yellowBtn {
-  background-color: #E7C967; }
+  background-color: #f8da79; }
 
 .pinkBtn {
   background-color: #F0D5CE; }
@@ -322,7 +395,7 @@ LOGIN PAGE
   margin: 10px; }
 
 .inputLogin:focus {
-  outline-color: #E7C967; }
+  outline-color: #f8da79; }
 
 .inputReg:focus {
   outline-color: #E4BCB2; }
@@ -343,7 +416,7 @@ FORUM PAGE
   min-height: 550px; }
 
 .button {
-  background-color: #E7C967;
+  background-color: #f8da79;
   text-transform: uppercase;
   font-family: "Oswald", sans-serif;
   border: 0;
@@ -448,7 +521,6 @@ PROFILE PAGE
   border: 0;
   border-radius: 5px;
   font-size: 1em;
-  padding: 7px 12px;
   background-color: #E4BCB2;
   color: black; }
 
@@ -471,4 +543,99 @@ CONTACT PAGE
         margin-right: 10px; }
 
 .rightItemContact {
-  padding: 50px; }
+  padding: 50px;
+  text-align: center; }
+  .rightItemContact h2 {
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif; }
+
+.wpcf7-form {
+  margin-top: 30px; }
+  .wpcf7-form .wpcf7-text {
+    font-family: "Roboto Mono", monospace;
+    margin-bottom: 25px;
+    padding: 10px;
+    height: 50px;
+    border: 2px solid #E4BCB2;
+    border-radius: 5px;
+    width: 100%; }
+  .wpcf7-form textarea {
+    font-family: "Roboto Mono", monospace;
+    height: 200px;
+    padding: 10px;
+    border: 2px solid #E4BCB2;
+    border-radius: 5px;
+    width: 100%; }
+
+.itemContact {
+  padding-left: 7px;
+  padding-right: 7px; }
+
+.rowBtn {
+  text-align: center; }
+
+.wpcf7-submit {
+  padding: 10px 70px;
+  background-color: #f8da79;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  color: black;
+  border-radius: 5px;
+  border: 0; }
+
+/*-----------------------
+404 PAGE
+-----------------------*/
+.container404 {
+  padding-top: 150px;
+  min-height: 600px; }
+
+/*-----------------------
+INSTAGRAM FEED
+-----------------------*/
+.instawrap {
+  background-color: #d5d5d5;
+  width: 100%; }
+
+#instafeed {
+  display: table;
+  margin: 150px auto 150px auto;
+  position: relative; }
+
+.instaimg {
+  position: relative;
+  display: inline;
+  margin: 10px; }
+  .instaimg li {
+    display: inline; }
+  .instaimg a {
+    position: relative;
+    display: inline-block; }
+  .instaimg img {
+    display: inline-block;
+    width: 230px;
+    height: 230px;
+    overflow: hidden; }
+
+.likes {
+  background-color: rgba(34, 45, 99, 0.7);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 1.1em;
+  opacity: 0;
+  color: white;
+  padding: 45% 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transform: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+
+#instafeed a:hover .likes {
+  opacity: 1; }

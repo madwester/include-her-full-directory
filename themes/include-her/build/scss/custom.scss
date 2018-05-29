@@ -4,6 +4,12 @@
 //@import '/compontents/bootstrap/scss/mixins/breakpoints.scss';
 //@import '/compontents/bootstrap/scss/variables.scss';
 
+
+//@include box-shadow(2px 2px 3px 0px rgba(184,184,184,1));
+/*-----------------------
+GENERICS
+-----------------------*/
+
 button, h1 {
   font-family: $oswald;
   @include ease-animation(0.3s);
@@ -30,11 +36,33 @@ li {
 main { 
   margin: 0;
 } 
-.current-menu-item {
-  a{
-    border-bottom: 1px solid black;
+.blue {
+  background-color: $brandBlue;
+  color: $white;
+  a {
+    color: $white;
   }
 }
+.pink {
+  background-color: $brandPink;
+  
+}
+.yellow {
+  background-color: $brandYellow;
+}
+.gray {
+  background-color: $brandGray;
+}
+
+/*-----------------------
+Background colors main
+-----------------------*/
+
+//contact page
+.page-template-contact {
+  background-color: $brandGray;
+}
+//about page
 .page-template-about { 
   background-color: $brandPink;
 }
@@ -58,9 +86,19 @@ main {
 .bp-user {
   background-color: $brandPink;
 }
+.event-template-default, .events {
+  background-color: $brandBlue;
+}
+
 /*-----------------------
 NAVBAR
 -----------------------*/
+
+.current-menu-item {
+  a{
+    border-bottom: 1px solid black;
+  }
+}
 .navbar-light .navbar-toggler { 
   color: $black;
   background-color: transparent;
@@ -134,21 +172,21 @@ NAVBAR
   a {
     background-color: $brandPink;
     border-radius: 5px;
+    border-bottom: 0;
   }
 }
-
 .dropdown-item {
   font-family: $roboto-mono;
   background-color: white!important;
   color: black;
 }
-/*-----------------------
-FEATURE
------------------------*/
-
-.containerHome {
-  margin-bottom: 100px;
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 10px 15px!important;
 }
+
+/*-----------------------
+FEATURE (TOP IMAGE ON EVERY PAGE)
+-----------------------*/
 
 .feature { 
   padding: 300px;
@@ -176,7 +214,6 @@ FEATURE
 }
 .featureBtn {
   margin: 30px;
-  background-color: $brandPink;
   border-radius: 7px;
   color: $white;
   text-transform: uppercase;
@@ -197,22 +234,13 @@ FEATURE
   }
 }
 
-.blue {
-  background-color: $brandBlue;
-  color: $white;
-  a {
-    color: $white;
-  }
-}
-.pink {
-  background-color: $brandPink;
-  
-}
-.yellow {
-  background-color: $brandYellow;
-}
-.gray {
-  background-color: $brandGray;
+/*-----------------------
+HOME PAGE 
+-----------------------*/
+
+.containerHome {
+  margin-bottom: 100px;
+  padding: 0;
 }
 .flexRow {
   display: flex;
@@ -223,12 +251,17 @@ FEATURE
     flex-direction: column;
   }
 }
+.whiteDiv {
+  height: 400px;
+  background-color: white;
+}
 .homepageItem {
-  height: 350px;
-  margin: 20px 20px 0 20px;
-  padding: 50px;
+  height: 450px;
+  padding: 120px;
   font-size: 1.2em; 
-  @include box-shadow(2px 2px 3px 0px rgba(184,184,184,1));
+  width: 50%;
+  font-family: $oswald;
+  text-align: center;
   a {
     text-transform: uppercase;
     font-weight: 500;
@@ -238,12 +271,43 @@ FEATURE
   i { 
     margin-left: 10px;
   }
+  h2 {
+    text-transform: uppercase;
+    font-family: $oswald;
+    font-size: 2.2em;
+  }
+  h4 {
+    font-family: $roboto-mono;
+    margin: 10px 0 30px 0;
+    font-size: 1.1em;
+  }
+  h5 {
+    font-family: $roboto-mono;
+    margin: 10px 0 30px 0;
+    font-size: 1.3em;
+  }
 }
-.homepageItem.large {
-  width: 65%;
+.homepageBtn {
+  padding: 10px 20px;
+  background-color: transparent;
+  font-family: $oswald;
+  text-transform: uppercase;
 }
-.homepageItem.small {
-  width: 35%;
+.homepageBtnYellow {
+  border: 2px solid $brandYellow;
+  color: $brandYellow;
+}
+.homepageBtnGray {
+  border: 2px solid $brandGray;
+  color: $brandGray;
+}
+.homepageBtnWhite {
+  border: 2px solid $white;
+  color: $white;
+}
+.homepageBtnBlack {
+  border: 2px solid $black;
+  color: $black;
 }
 @media only screen and (min-width: 767px) and (max-width: 991px) {
   .homepageItem {
@@ -251,20 +315,46 @@ FEATURE
     font-size: 0.9em;
     margin: 10px 5px;
     height: 270px;
+    color: $white;
   }
 }
 @media only screen and (max-width: 766px) {
   .homepageItem {
     margin: 10px 0;
   }
-  .homepageItem.large {
-    width: 100%;
-  }
-  .homepageItem.small {
-    width: 100%;
-  }
+}
+.contactItem {
+  background-image: url('../../build/images/hp-items/hp-item9.jpg'); 
+  color: $brandGray;
+}
+.forumItem {
+  background-image: url('../../build/images/hp-items/hp-item7.jpg'); 
+  color: $brandYellow;
 }
 
+/*-----------------------
+ABOUT
+-----------------------*/
+.carousel {
+  height: 300px;
+  margin: 60px 0;
+}
+.carousel-item {
+  color: white;
+  text-align: center;
+  height: 300px;
+  padding: 70px 100px;
+  h2 {
+    font-family: $oswald;
+    margin-bottom: 15px;
+  }
+  h4 {
+    font-family: $roboto-mono;
+  }
+}
+.carouselCaption {
+
+}
 /*-----------------------
 ABOUT
 -----------------------*/
@@ -522,7 +612,7 @@ PROFILE PAGE
   border: 0;
   border-radius: 5px;
   font-size: 1em;
-  padding: 7px 12px;
+  //padding: 7px 12px;
   background-color: $brandPink;
   color: black;
 }
@@ -552,4 +642,104 @@ CONTACT PAGE
 }
 .rightItemContact {
   padding: 50px;
+  text-align: center;
+  h2 {
+    text-transform: uppercase;
+    font-family: $oswald;
+  }
 }
+.wpcf7-form {
+  margin-top: 30px;
+  .wpcf7-text {
+    font-family: $roboto-mono;
+    margin-bottom: 25px;
+    padding: 10px;
+    height: 50px;
+    border: 2px solid $brandPink;
+    border-radius: 5px;
+    width: 100%;
+  }
+  textarea {
+    font-family: $roboto-mono;
+    height: 200px;
+    padding: 10px;
+    border: 2px solid $brandPink;
+    border-radius: 5px;
+    width: 100%;
+  }
+}
+.itemContact {
+  padding-left: 7px;
+  padding-right: 7px;
+}
+.rowBtn {
+  text-align: center;
+}
+.wpcf7-submit {
+  padding: 10px 70px;
+  background-color: $brandYellow;
+  font-family: $oswald;
+  text-transform: uppercase;
+  font-size: 1.1em;
+  color: black;
+  border-radius: 5px;
+  border: 0;
+}
+
+/*-----------------------
+404 PAGE
+-----------------------*/
+
+.container404 {
+  padding-top: 150px;
+  min-height: 600px;
+}
+
+/*-----------------------
+INSTAGRAM FEED
+-----------------------*/
+.instawrap {
+  background-color: $brandGray;
+  width: 100%;
+}
+#instafeed {
+  display: table;
+  margin: 150px auto 150px auto;
+  position: relative;
+}
+.instaimg {
+  position: relative;
+  display: inline;
+  margin: 10px;
+  li {
+    display: inline;
+  }
+  a {
+    position: relative; 
+    display: inline-block;
+  }
+  img {
+    display: inline-block;
+    width: 230px;
+    height: 230px;
+    overflow: hidden;
+  }
+}
+.likes {
+  background-color: rgba(34, 45, 99, 0.7);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 1.1em;
+  opacity: 0;
+  color: white;
+  padding: 45% 0;
+  @include ease-animation(0.3s);
+}
+#instafeed a:hover .likes {
+  opacity: 1; 
+} 
