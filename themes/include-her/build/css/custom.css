@@ -28,8 +28,15 @@ li {
 .align-left {
   text-align: left; }
 
+html, body {
+  height: 100%;
+  margin-bottom: 0; }
+
 main {
-  margin: 0; }
+  min-height: 100%; }
+
+.content {
+  padding-bottom: 200px; }
 
 .blue {
   background-color: #222D63;
@@ -280,7 +287,7 @@ HOME PAGE
   color: #f8da79; }
 
 /*-----------------------
-ABOUT
+  CAROUSEL
 -----------------------*/
 .carousel {
   height: 300px;
@@ -324,6 +331,8 @@ ABOUT
 FOOTER
 -----------------------*/
 footer {
+  height: 200px;
+  margin-top: -200px;
   padding: 30px 40px 20px 40px;
   background-color: #F5F5F5; }
 
@@ -600,7 +609,7 @@ INSTAGRAM FEED
 
 #instafeed {
   display: table;
-  margin: 150px auto 150px auto;
+  margin: 150px auto 300px auto;
   position: relative; }
 
 .instaimg {

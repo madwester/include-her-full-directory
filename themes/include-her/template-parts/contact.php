@@ -8,7 +8,7 @@ Template Name: Contact Us
 <div class="feature featureContact">
     <h1>Dont' be shy. Get in touch.</h1>
 </div>
-    <div class="container">
+    <div class="container content">
         <div class="row">
             <div class="col-md-3 blue leftItemContact">
                 <h2>Follow us online</h2>

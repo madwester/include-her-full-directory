@@ -24,7 +24,7 @@ get_header();
 			<button type="button" class="btn featureBtn yellow">Forum</button>
 		<?php }?>
 	</div>
-	<div class="container-fluid containerHome">
+	<div class="container-fluid containerHome content">
 		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 			<ol class="carousel-indicators">
 				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -90,7 +90,6 @@ get_header();
 					<button class="homepageBtn homepageBtnGray">Contact</button>
 				</div>
 			</div>
-		</div>
 		</div>
 		<div id="instafeed"></div>
 	</div>
