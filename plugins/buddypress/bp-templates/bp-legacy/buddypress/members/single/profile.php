@@ -68,4 +68,4 @@ endswitch; ?>
  *
  * @since 1.1.0
  */
-
+do_action( 'bp_after_profile_content' );

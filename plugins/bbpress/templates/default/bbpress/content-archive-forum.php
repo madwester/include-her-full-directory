@@ -8,7 +8,7 @@
  */
 ?>
 <div id="bbpress-forums">
-	<div class="container-fluid">
+	<div class="container-fluid content">
 		<div class="row">
 			<div class="col-md-2">
 				<a href="localhost:8888/forums/new-topic"><button class="createTopic">Create new topic</button></a>

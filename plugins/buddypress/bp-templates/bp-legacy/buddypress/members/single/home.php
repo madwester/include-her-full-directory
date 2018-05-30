@@ -19,7 +19,7 @@
 	 */
 	do_action( 'bp_before_member_home_content' ); ?>
 
-	<div class="container-fluid">
+	<div class="container-fluid content">
 		<div class="row">
 			<div class="col-md-2">
 			<div id="item-header-avatar">

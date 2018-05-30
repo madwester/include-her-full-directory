@@ -10,7 +10,6 @@
 get_header(); ?>
 
 	<?php do_action( 'bbp_before_main_content' ); ?>
-	<h1>TEST!!</h1>
 	<div id="bbp-user-<?php bbp_current_user_id(); ?>" class="bbp-single-user">
 		<div class="entry-content">
 
