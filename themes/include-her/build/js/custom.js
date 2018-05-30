@@ -1,5 +1,15 @@
 //CUSTOM.JS
 
+window.addEventListener('load', () => {
+	(function(){
+		if($("body").hasClass("events")){
+			$("#member-events-upcoming-personal-li").addClass("blueCurrent");
+		}
+		else{
+			return 0;
+		}
+	});
+});
 
 window.addEventListener('load', () => {
 	(function() {
@@ -33,7 +43,6 @@ window.addEventListener('load', () => {
 		});*/
 	})(window);
 });
-
 
 
 
