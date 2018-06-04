@@ -2,7 +2,7 @@
 /*-----------------------
 GENERICS
 -----------------------*/
-button, h1 {
+button {
   font-family: "Oswald", sans-serif;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -10,6 +10,10 @@ button, h1 {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   cursor: pointer; }
+
+h1, h2, h3 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase; }
 
 a {
   color: black; }
@@ -313,7 +317,7 @@ ABOUT
 .contentAbout {
   width: 80%;
   padding: 50px 70px 90px 70px;
-  margin: -300px auto 100px auto;
+  margin: -300px auto 200px auto;
   background-color: #fff;
   -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
@@ -422,20 +426,23 @@ FORUM PAGE
   min-height: 550px; }
 
 #bbpress-forums {
-  margin: 120px 80px 0 80px;
+  margin: 10px 0;
   background-color: white;
-  padding: 40px;
   min-height: 550px; }
+
+.bbpress-forumsMargin {
+  margin: 120px 80px 150px 80px !important;
+  padding: 40px; }
 
 .button {
   background-color: #f8da79;
   text-transform: uppercase;
   font-family: "Oswald", sans-serif;
   border: 0;
-  font-size: 1em;
-  height: 30px;
-  width: 70px;
-  margin-left: 10px; }
+  height: auto;
+  width: auto;
+  padding: 7px 20px;
+  border-radius: 5px; }
 
 #bbp_search {
   height: 30px; }
@@ -476,6 +483,14 @@ FORUM PAGE
   border-radius: 5px;
   cursor: pointer; }
 
+.bbp-submit-wrapper {
+  float: left !important;
+  margin-bottom: 40px; }
+
+.titleNewTopic {
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif; }
+
 .bbp-topic-freshness-author {
   display: none; }
 
@@ -491,6 +506,7 @@ PROFILE PAGE
   padding: 20px;
   border-radius: 2px; }
   #item-header h2 {
+    text-transform: lowercase;
     font-family: "Roboto Mono", monospace;
     margin-bottom: 15px;
     font-size: 1.3em; }
@@ -533,8 +549,12 @@ PROFILE PAGE
   border: 0;
   border-radius: 5px;
   font-size: 1em;
+  padding: 7px 12px;
   background-color: #E4BCB2;
-  color: black; }
+  color: black;
+  margin: 0;
+  height: auto;
+  width: auto; }
 
 /*-----------------------
 CONTACT PAGE
@@ -651,3 +671,29 @@ INSTAGRAM FEED
 
 #instafeed a:hover .likes {
   opacity: 1; }
+
+.singleEventContent {
+  text-align: center;
+  margin-bottom: 200px; }
+
+.eventTitle {
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif; }
+
+.eventTitleList {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  color: #222D63; }
+
+.eventItemList {
+  margin-bottom: 30px;
+  background-color: #f0f2fa;
+  padding: 10px; }
+
+.pastEvent {
+  background-color: #f1ddd8;
+  text-decoration: line-through; }
+
+#profile-event-form {
+  margin-top: 30px; }

@@ -10,11 +10,16 @@
 GENERICS
 -----------------------*/
 
-button, h1 {
+button {
   font-family: $oswald;
   @include ease-animation(0.3s);
   cursor: pointer;
 }
+h1, h2, h3 {
+  font-family: $oswald;
+  text-transform: uppercase;
+}
+
 a {
   color: black;
   &:hover {
@@ -372,7 +377,7 @@ ABOUT
 .contentAbout {
   width: 80%;
   padding: 50px 70px 90px 70px;
-  margin: -300px auto 100px auto;
+  margin: -300px auto 200px auto;
   background-color: $white;
   @include box-shadow(0px 0px 20px 0px rgba(0,0,0,0.4));
   h1 {
@@ -494,21 +499,26 @@ FORUM PAGE
   min-height: 550px;
 }
 #bbpress-forums {
-  margin: $headerHeight 80px 0 80px;
+  //margin: $headerHeight 80px 0 80px;
+  margin: 10px 0;
   background-color: white;
-  padding: 40px;
+  //padding: 40px;
   min-height: 550px;
+}
+.bbpress-forumsMargin {
+  margin: $headerHeight 80px 150px 80px !important;
+  padding: 40px;
 }
 .button {
   background-color: $brandYellow;
   text-transform: uppercase;
   font-family: $oswald;
   border: 0;
-  //border-radius: 5px;
-  font-size: 1em;
-  height: 30px;
-  width: 70px;
-  margin-left: 10px;
+  //font-size: 1em;
+  height: auto;
+  width: auto;
+  padding: 7px 20px;
+  border-radius: 5px;
 }
 #bbp_search {
   height: 30px;
@@ -552,9 +562,18 @@ FORUM PAGE
   border-radius: 5px;
   cursor: pointer;
 }
+.bbp-submit-wrapper {
+  float: left!important;
+  margin-bottom: 40px;
+}
+.titleNewTopic {
+  text-transform: uppercase;
+  font-family: $oswald;
+}
 .bbp-topic-freshness-author {
   display: none;
 }
+
 .bbp-body {
   font-size: 14px;
 }
@@ -569,7 +588,7 @@ PROFILE PAGE
   padding: 20px;
   border-radius: 2px;
   h2 {
-    //text-transform: uppercase;
+    text-transform: lowercase;
     font-family: $roboto-mono; 
     margin-bottom: 15px;
     font-size: 1.3em;
@@ -622,9 +641,12 @@ PROFILE PAGE
   border: 0;
   border-radius: 5px;
   font-size: 1em;
-  //padding: 7px 12px;
+  padding: 7px 12px;
   background-color: $brandPink;
   color: black;
+  margin: 0;
+  height: auto;
+  width: auto;
 }
 
 /*-----------------------
@@ -754,3 +776,29 @@ INSTAGRAM FEED
   opacity: 1; 
 } 
 
+.singleEventContent {
+  text-align: center;
+  margin-bottom: 200px;
+}
+.eventTitle {
+  text-transform: uppercase;
+  font-family: $oswald;
+}
+.eventTitleList {
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-family: $oswald;
+  color: $brandBlue;
+}
+.eventItemList {
+  margin-bottom: 30px;
+  background-color: lighten($brandBlue, 70%);
+  padding: 10px;
+}
+.pastEvent {
+  background-color: lighten($brandPink, 10%);
+  text-decoration: line-through;
+}
+#profile-event-form {
+  margin-top: 30px;
+}
