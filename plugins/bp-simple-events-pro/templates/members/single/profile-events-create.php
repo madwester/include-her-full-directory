@@ -138,7 +138,7 @@ $required_fields = get_option( 'pp_events_required' );
 
 		<p>
 			<label for="event-img"><?php echo __( 'Image ( jpg only  )', 'bp-simple-events' ); ?>: <?php if( in_array('image', $required_fields) ) echo __( '*', 'bp-simple-events' ); ?></label>
-			<input type="file" id="event-img" name="event-img" value="">
+			<input type="file" id="event-img" class="addImageBtn" name="event-img" value="">
 			&nbsp;&nbsp;<input onclick="clearFileInput('event-img')" type="button" value="Remove" />
 		</p>
 

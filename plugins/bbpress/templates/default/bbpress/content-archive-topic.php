@@ -9,11 +9,11 @@
 //when user press on a topic
 ?>
 
-<div id="bbpress-forums">
+<div id="bbpress-forums" class="bbpress-forumsMargin">
 <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-2 col-sm-2 col-xs-12">
-			<a href="localhost:8888/forums/new-topic"><button class="createTopic">Create new topic</button></a>
+			<a href="http://localhost:8888/forums/new-topic/"><button class="createTopic">Create new topic</button></a>
 			<?php get_sidebar(); ?>
 		</div>
 		<div class="col-md-10 col-sm-2 col-xs-12">

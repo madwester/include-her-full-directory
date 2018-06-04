@@ -28,18 +28,24 @@ get_header();
 ?>
 
 <div id="primary" class="content-area">
-	<div id="content" class="site-content" role="main">
+
+	<div id="content" class="site-content singleEventContent" role="main">
 		<div id="buddypress">
-	
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<div class="entry-content">
 				
-				<h2 class="entry-title">
+				<h2 class="entry-title eventTitle">
 					<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
 					<?php the_title(); ?></a>
 				</h2>
-
+				<?php
+				if ( has_post_thumbnail() ) {
+					echo '<br/>';
+					the_post_thumbnail( 'large' );
+					echo '<br/>';
+				}
+				?>
 				<?php
 				$author_id = get_the_author_meta('ID');
 				$author_name = get_the_author_meta('display_name');
@@ -140,15 +146,6 @@ get_header();
 				<?php echo bp_core_fetch_avatar( array( 'item_id' => $author_id, 'type' => 'thumb' ) ); ?>
 				&nbsp;<?php echo $author_name; ?></a>
 
-
-				<?php
-				if ( has_post_thumbnail() ) {
-					echo '<br/>';
-					the_post_thumbnail( 'large' );
-					echo '<br/>';
-				}
-				?>
-
 				<?php the_content(); ?>
 
 				<?php
@@ -242,5 +239,4 @@ get_header();
 	</div><!-- #content -->
 </div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -29,9 +29,7 @@ wp_print_scripts( 'google-maps-api' );
 <div id="primary" class="content-area">
 	<div id="content" class="site-content" role="main">
 		<div id="buddypress">
-		
 		<?php while ( have_posts() ) : the_post(); ?>
-
 			<div class="entry-content">
 				<br/>
 				<h2 class="entry-title">

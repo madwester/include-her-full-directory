@@ -63,38 +63,37 @@ if ( $event_attendance ) {
 	
 	?>
 	
-	<?php _e( 'This member is attending these upcoming Events:', 'bp-simple-events' ); ?>
+	<?php// _e( 'This member is attending these upcoming Events:', 'bp-simple-events' ); ?>
 	
 	<?php if ( $wp_query->have_posts() ) : ?>
 	
-		<div class="entry-content"><br/>
+		<div class="entry-content">
 			<?php echo pp_events_profile_pagination( $wp_query ); ?>
 		</div>
 	
 		<?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); 	?>
 	
-			<div class="entry-content">
-				<br/>
-				<h2 class="entry-title">
+			<div class="entry-content eventItemList">
+				<h2 class="entry-title eventTitleList">
 					<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
 					<?php the_title(); ?></a>
 				</h2>
 	
 	
-				<?php the_excerpt(); ?>
+				<?php //the_excerpt(); ?>
 	
 				<?php
-				if ( has_post_thumbnail() ) {
+				/*if ( has_post_thumbnail() ) {
 					the_post_thumbnail( 'thumbnail' );
 					echo '<br/>';
-				}
+				}*/
 				?>
 	
 				<?php
 				$meta = get_post_meta($post->ID );
 	
 				if( ! empty( $meta['event-date'][0] ) )
-					echo __( 'Date', 'bp-simple-events' ) . ':&nbsp;' . $meta['event-date'][0];
+					echo __( '', 'bp-simple-events' ) . '' . $meta['event-date'][0];
 	
 				if( ! empty( $meta['event-address'][0] ) )
 					echo '<br/>' . __( 'Location', 'bp-simple-events' ) . ':&nbsp;' . $meta['event-address'][0];
@@ -128,7 +127,7 @@ if ( $event_attendance ) {
 				?>
 	
 				<br/>
-				Category: <?php the_category(', ') ?>
+				<?php the_category(', ') ?>
 	
 	
 			</div><!-- .entry-content -->

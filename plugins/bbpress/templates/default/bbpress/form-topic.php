@@ -11,7 +11,7 @@
 
 <?php if ( !bbp_is_single_forum() ) : ?>
 
-<div id="bbpress-forums">
+<div id="bbpress-forums" class="bbpress-forumsMargin">
 	<?php bbp_breadcrumb(); ?>
 
 <?php endif; ?>
@@ -33,7 +33,7 @@
 			<?php do_action( 'bbp_theme_before_topic_form' ); ?>
 
 			<fieldset class="bbp-form">
-				<legend>
+				<legend class="titleNewTopic">
 
 					<?php
 						if ( bbp_is_topic_edit() )

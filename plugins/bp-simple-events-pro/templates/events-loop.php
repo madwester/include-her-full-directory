@@ -190,7 +190,6 @@ $wp_query = new WP_Query( $args );
 			</div>
 		
 		<?php endif; ?>		
-		
 	
 		<?php if ( $wp_query->have_posts() ) : ?>
 
@@ -202,7 +201,6 @@ $wp_query = new WP_Query( $args );
 
 				<br/>
 				<div class="entry-content">
-
 					<h2 class="entry-title">
 						<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
 						<?php the_title(); ?></a>
@@ -217,9 +215,7 @@ $wp_query = new WP_Query( $args );
 					<?php echo bp_core_fetch_avatar( array( 'item_id' => $author_id ) ); ?>
 					&nbsp;<?php echo $author_name; ?></a>
 
-
 					<?php the_excerpt(); ?>
-
 
 					<?php
 					if ( has_post_thumbnail() ) {

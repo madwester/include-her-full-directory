@@ -15,7 +15,7 @@
 	/**
 	 * Fires before the display of member home content.
 	 *
-	 * @since 1.2.0
+	 * @since 1.2.0`
 	 */
 	do_action( 'bp_before_member_home_content' ); ?>
 
