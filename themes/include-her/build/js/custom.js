@@ -5,9 +5,6 @@ window.addEventListener('load', () => {
 		if($("body").hasClass("events")){
 			$("#member-events-upcoming-personal-li").addClass("blueCurrent");
 		}
-		else{
-			return 0;
-		}
 	});
 });
 

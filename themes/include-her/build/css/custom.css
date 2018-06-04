@@ -155,6 +155,9 @@ NAVBAR
 .navbar-expand-lg .navbar-nav .nav-link {
   padding: 10px 15px !important; }
 
+.dropdown-item.active, .dropdown-item:active {
+  color: black !important; }
+
 /*-----------------------
 FEATURE (TOP IMAGE ON EVERY PAGE)
 -----------------------*/
