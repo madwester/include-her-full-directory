@@ -78,6 +78,9 @@ Background colors main
   background-repeat: no-repeat;
   background-position: top; }
 
+.page-id-79 {
+  background-color: #E4BCB2; }
+
 .bbpress, .page-id-85 {
   background-color: #f8da79; }
 
@@ -404,6 +407,14 @@ LOGIN PAGE
   text-transform: uppercase;
   font-family: "Oswald", sans-serif;
   margin: 0 0 50px 0; }
+
+.tml h5 {
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif; }
+
+.tml h6 {
+  font-family: "Roboto Mono", monospace;
+  margin-bottom: 50px; }
 
 #rememberme {
   width: 20px;

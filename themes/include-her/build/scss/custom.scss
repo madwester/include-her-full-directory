@@ -92,6 +92,10 @@ Background colors main
   background-repeat: no-repeat;
   background-position: top;
 }
+//lost password
+.page-id-79 {
+  background-color: $brandPink;
+}
 .bbpress, .page-id-85 {
   background-color: $brandYellow;
 }
@@ -473,8 +477,15 @@ LOGIN PAGE
     text-transform: uppercase;
     font-family: $oswald;
     margin: 0 0 50px 0;
-
   } 
+  h5 {
+    text-transform: uppercase;
+    font-family: $oswald;
+  }
+  h6 {
+    font-family: $roboto-mono;
+    margin-bottom: 50px;
+  }
 }
 #rememberme {
   width: 20px;
