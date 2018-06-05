@@ -9,8 +9,7 @@
 
 ?>
 
-<div id="bbpress-forums">
-
+<div id="bbpress-forums" class="bbpress-forumsMargin">
 	<?php bbp_breadcrumb(); ?>
 
 	<?php do_action( 'bbp_template_before_single_topic' ); ?>
