@@ -16,13 +16,15 @@ get_header();
 ?>
 <main>
 	<div class="feature featureHome">
-		<?php if(!is_user_logged_in()) { ?>
-			<h1>We love to speak about code.<br>Welcome in!</h1>
-			<button type="button" class="btn featureBtn pink">Join us!</button>
-		<?php } else { ?>
-			<h1>Are you being stuck with anything in your code? Ask for help in our forum.</h1>
-			<button type="button" class="btn featureBtn yellow">Forum</button>
-		<?php }?>
+		<div class="featureCaption">
+			<?php if(!is_user_logged_in()) { ?>
+				<h1>We love to speak about code.<br>Welcome in!</h1>
+				<button type="button" class="btn featureBtn pink">Join us!</button>
+			<?php } else { ?>
+				<h1>Are you being stuck with anything in your code? Ask for help in our forum.</h1>
+				<button type="button" class="btn featureBtn yellow">Forum</button>
+			<?php }?>
+		</div>
 	</div>
 	<div class="container-fluid containerHome content">
 		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">

@@ -102,7 +102,7 @@ Background colors main
 .bp-user {
   background-color: $brandPink;
 }
-.event-template-default, .events {
+.event-template-default, .events, .page-id-130 {
   background-color: $brandBlue;
 }
 
@@ -129,6 +129,12 @@ NAVBAR
   background-color: rgba(255, 255, 255, 0.9); 
   padding: 15px 25px;
   height: $headerHeight;
+  @include respondTo('md') {
+    position: fixed;
+    height: auto;
+    background-color: white;
+    top: 0;
+  }
 }
 .navigationSymbol {
   color: $brandPink;
@@ -207,16 +213,40 @@ FEATURE (TOP IMAGE ON EVERY PAGE)
 -----------------------*/
 
 .feature { 
-  padding: 300px;
   text-align: center;
   height: 1000px;
   background-repeat: no-repeat;
   background-size: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 100px;
   h1 {
     color: $white;
-    font-size: 3.5em;
+    font-size: 3.3em;
     letter-spacing: 1px; //0px is default 
   }
+  @include respondTo('lg'){
+    height: 750px;
+  }
+  @include respondTo('md'){
+    margin-top: 70px;
+    height: 600px;
+  }
+  @include respondTo('sm'){
+    height: 400px;
+    h1 {
+      font-size: 2em;
+    }
+  }
+  @include respondTo('xs'){
+    height: 300px;
+    h1 {
+      font-size: 1.5em;
+    }
+  }
+}
+.featureCaption {
+  margin: auto;
 }
 .featureHome {
   background-image: url('../../build/images/feature-image-hp.png');
@@ -230,6 +260,9 @@ FEATURE (TOP IMAGE ON EVERY PAGE)
     text-transform: uppercase;
   }
 }
+.featureEvents {
+  background-image: url('../../build/images/feature-image-events.jpg');  
+}
 .featureBtn {
   margin: 30px;
   border-radius: 7px;
@@ -237,15 +270,7 @@ FEATURE (TOP IMAGE ON EVERY PAGE)
   text-transform: uppercase;
   font-size: 1.4em;
   padding: 10px 40px;
-}
-@media only screen and (max-width: 991px) {
-  .feature {
-    padding: 120px 40px;
-    h1 {
-      font-size: 2em;
-    }
-  }
-  .featureBtn {
+  @include respondTo('md'){
     margin: 10px;
     font-size: 1.2em;
     padding: 10px 20px;
@@ -263,9 +288,7 @@ HOME PAGE
 .flexRow {
   display: flex;
   flex-direction: row;
-}
-@media only screen and (max-width: 767px) {
-  .flexRow {
+  @include respondTo('sm'){
     flex-direction: column;
   }
 }
@@ -275,11 +298,12 @@ HOME PAGE
 }
 .homepageItem {
   height: 450px;
-  padding: 120px;
   font-size: 1.2em; 
   width: 50%;
   font-family: $oswald;
   text-align: center;
+  display: flex;
+  align-items: center;
   a {
     text-transform: uppercase;
     font-weight: 500;
@@ -304,6 +328,14 @@ HOME PAGE
     margin: 10px 0 30px 0;
     font-size: 1.3em;
   }
+  @include respondTo('md'){
+    margin: 0;
+    width: 100%;
+  }
+}
+.homepageItemCaption {
+  margin: 0 auto;
+  width: 80%;
 }
 .homepageBtn {
   padding: 10px 20px;
@@ -329,16 +361,11 @@ HOME PAGE
 }
 @media only screen and (min-width: 767px) and (max-width: 991px) {
   .homepageItem {
-    padding: 20px;
-    font-size: 0.9em;
-    margin: 10px 5px;
-    height: 270px;
-    color: $white;
-  }
-}
-@media only screen and (max-width: 766px) {
-  .homepageItem {
-    margin: 10px 0;
+    //padding: 20px;
+    //font-size: 0.9em;
+    //margin: 10px 5px;
+    //height: 270px;
+    //color: $white;
   }
 }
 .contactItem {
@@ -409,6 +436,10 @@ footer {
   margin-top: -$footerHeight;
   padding: 30px 40px 20px 40px;
   background-color: $lightGray;
+  @include respondTo('sm'){
+    padding: 20px 30px;
+    height: $footerHeightSm;
+  }
 }
 .itemFoot {
   width: 50%;
@@ -418,21 +449,28 @@ footer {
   p {
     font-size: 0.9em;
   }
+  @include respondTo('sm'){
+    width: 100%;
+    text-align: center; 
+    img {
+      width: 80px;
+    }
+  }
 }
 .socialMediaList {
   list-style: none;
-  li {
+  li { 
     display: inline-block;
     i {
       text-align: center;
       width: 45px;
-      height: 45px;
+      height: 45px; 
       font-size: 18px;
       margin: 8px;
       background-color: lighten($brandPink, 10%);
       padding: 14px;
       border-radius: 50%;
-      color: $iconGray;
+      color: $iconGray; 
       &:hover {
         background-color: $iconGray;
         cursor: pointer;
@@ -441,14 +479,8 @@ footer {
       }
     }
   }
-}
-@media only screen and (max-width: 766px) { 
-  .itemFoot {
-    width: 100%;
-    text-align: center; 
-    img {
-      width: 90px;
-    }
+  @include respondTo('sm'){
+    margin: 20px 0 0 0;
   }
 }
 
@@ -478,11 +510,7 @@ LOGIN PAGE
     font-family: $oswald;
     margin: 0 0 50px 0;
   } 
-  h5 {
-    text-transform: uppercase;
-    font-family: $oswald;
-  }
-  h6 {
+  p {
     font-family: $roboto-mono;
     margin-bottom: 50px;
   }
@@ -741,6 +769,7 @@ CONTACT PAGE
 /*-----------------------
 INSTAGRAM FEED
 -----------------------*/
+
 .instawrap {
   background-color: $brandGray;
   width: 100%;
@@ -787,6 +816,10 @@ INSTAGRAM FEED
   opacity: 1; 
 } 
 
+/*-----------------------
+EVENTS
+-----------------------*/
+
 .singleEventContent {
   text-align: center;
   margin-bottom: 200px;
@@ -812,4 +845,8 @@ INSTAGRAM FEED
 }
 #profile-event-form {
   margin-top: 30px;
+}
+.containerEvents {
+  margin-top: 0!important;
+
 }

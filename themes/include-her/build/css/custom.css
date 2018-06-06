@@ -87,7 +87,7 @@ Background colors main
 .bp-user {
   background-color: #E4BCB2; }
 
-.event-template-default, .events {
+.event-template-default, .events, .page-id-130 {
   background-color: #222D63; }
 
 /*-----------------------
@@ -109,6 +109,12 @@ NAVBAR
   background-color: rgba(255, 255, 255, 0.9);
   padding: 15px 25px;
   height: 120px; }
+  @media (max-width: 991px) {
+    .navbar {
+      position: fixed;
+      height: auto;
+      background-color: white;
+      top: 0; } }
 
 .navigationSymbol {
   color: #E4BCB2; }
@@ -169,15 +175,37 @@ NAVBAR
 FEATURE (TOP IMAGE ON EVERY PAGE)
 -----------------------*/
 .feature {
-  padding: 300px;
   text-align: center;
   height: 1000px;
   background-repeat: no-repeat;
-  background-size: 100%; }
+  background-size: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 100px; }
   .feature h1 {
     color: #fff;
-    font-size: 3.5em;
+    font-size: 3.3em;
     letter-spacing: 1px; }
+  @media (max-width: 1199px) {
+    .feature {
+      height: 750px; } }
+  @media (max-width: 991px) {
+    .feature {
+      margin-top: 70px;
+      height: 600px; } }
+  @media (max-width: 767px) {
+    .feature {
+      height: 400px; }
+      .feature h1 {
+        font-size: 2em; } }
+  @media (max-width: 575px) {
+    .feature {
+      height: 300px; }
+      .feature h1 {
+        font-size: 1.5em; } }
+
+.featureCaption {
+  margin: auto; }
 
 .featureHome {
   background-image: url("../../build/images/feature-image-hp.png"); }
@@ -190,6 +218,9 @@ FEATURE (TOP IMAGE ON EVERY PAGE)
   .featureContact h1 {
     text-transform: uppercase; }
 
+.featureEvents {
+  background-image: url("../../build/images/feature-image-events.jpg"); }
+
 .featureBtn {
   margin: 30px;
   border-radius: 7px;
@@ -197,16 +228,11 @@ FEATURE (TOP IMAGE ON EVERY PAGE)
   text-transform: uppercase;
   font-size: 1.4em;
   padding: 10px 40px; }
-
-@media only screen and (max-width: 991px) {
-  .feature {
-    padding: 120px 40px; }
-    .feature h1 {
-      font-size: 2em; }
-  .featureBtn {
-    margin: 10px;
-    font-size: 1.2em;
-    padding: 10px 20px; } }
+  @media (max-width: 991px) {
+    .featureBtn {
+      margin: 10px;
+      font-size: 1.2em;
+      padding: 10px 20px; } }
 
 /*-----------------------
 HOME PAGE 
@@ -218,10 +244,9 @@ HOME PAGE
 .flexRow {
   display: flex;
   flex-direction: row; }
-
-@media only screen and (max-width: 767px) {
-  .flexRow {
-    flex-direction: column; } }
+  @media (max-width: 767px) {
+    .flexRow {
+      flex-direction: column; } }
 
 .whiteDiv {
   height: 400px;
@@ -229,11 +254,12 @@ HOME PAGE
 
 .homepageItem {
   height: 450px;
-  padding: 120px;
   font-size: 1.2em;
   width: 50%;
   font-family: "Oswald", sans-serif;
-  text-align: center; }
+  text-align: center;
+  display: flex;
+  align-items: center; }
   .homepageItem a {
     text-transform: uppercase;
     font-weight: 500;
@@ -253,6 +279,14 @@ HOME PAGE
     font-family: "Roboto Mono", monospace;
     margin: 10px 0 30px 0;
     font-size: 1.3em; }
+  @media (max-width: 991px) {
+    .homepageItem {
+      margin: 0;
+      width: 100%; } }
+
+.homepageItemCaption {
+  margin: 0 auto;
+  width: 80%; }
 
 .homepageBtn {
   padding: 10px 20px;
@@ -275,18 +309,6 @@ HOME PAGE
 .homepageBtnBlack {
   border: 2px solid #000;
   color: #000; }
-
-@media only screen and (min-width: 767px) and (max-width: 991px) {
-  .homepageItem {
-    padding: 20px;
-    font-size: 0.9em;
-    margin: 10px 5px;
-    height: 270px;
-    color: #fff; } }
-
-@media only screen and (max-width: 766px) {
-  .homepageItem {
-    margin: 10px 0; } }
 
 .contactItem {
   background-image: url("../../build/images/hp-items/hp-item9.jpg");
@@ -345,6 +367,10 @@ footer {
   margin-top: -200px;
   padding: 30px 40px 20px 40px;
   background-color: #F5F5F5; }
+  @media (max-width: 767px) {
+    footer {
+      padding: 20px 30px;
+      height: 230px; } }
 
 .itemFoot {
   width: 50%; }
@@ -352,6 +378,12 @@ footer {
     width: 100px; }
   .itemFoot p {
     font-size: 0.9em; }
+  @media (max-width: 767px) {
+    .itemFoot {
+      width: 100%;
+      text-align: center; }
+      .itemFoot img {
+        width: 80px; } }
 
 .socialMediaList {
   list-style: none; }
@@ -376,13 +408,9 @@ footer {
         -ms-transform: all 0.3s ease-in-out;
         -o-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out; }
-
-@media only screen and (max-width: 766px) {
-  .itemFoot {
-    width: 100%;
-    text-align: center; }
-    .itemFoot img {
-      width: 90px; } }
+  @media (max-width: 767px) {
+    .socialMediaList {
+      margin: 20px 0 0 0; } }
 
 /*-----------------------
 LOGIN PAGE
@@ -408,11 +436,7 @@ LOGIN PAGE
   font-family: "Oswald", sans-serif;
   margin: 0 0 50px 0; }
 
-.tml h5 {
-  text-transform: uppercase;
-  font-family: "Oswald", sans-serif; }
-
-.tml h6 {
+.tml p {
   font-family: "Roboto Mono", monospace;
   margin-bottom: 50px; }
 
@@ -683,6 +707,9 @@ INSTAGRAM FEED
 #instafeed a:hover .likes {
   opacity: 1; }
 
+/*-----------------------
+EVENTS
+-----------------------*/
 .singleEventContent {
   text-align: center;
   margin-bottom: 200px; }
@@ -708,3 +735,6 @@ INSTAGRAM FEED
 
 #profile-event-form {
   margin-top: 30px; }
+
+.containerEvents {
+  margin-top: 0 !important; }

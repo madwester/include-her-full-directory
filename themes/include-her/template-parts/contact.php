@@ -6,7 +6,9 @@ Template Name: Contact Us
 <?php get_header(); ?>
 <main>  
 <div class="feature featureContact">
-    <h1>Dont' be shy. Get in touch.</h1>
+    <div class="featureCaption">
+        <h1>Dont' be shy. Get in touch.</h1>
+    </div>
 </div>
     <div class="container content">
         <div class="row">
