@@ -65,19 +65,22 @@ else {
 $wp_query = new WP_Query( $args );
  
 ?>
-
+<div class="feature featureEvents">
+<div class="featureCaption">
+        <h1>Upcoming events</h1>
+    </div>
+</div>
 <div id="primary" class="content-area">
 	<div id="content" class="site-content" role="main">
-		<div id='buddypress'>
-	
+		<div id='buddypress' class="containerEvents">
 		<!-- Events Search -->
+		<?php include("eventsMap.php");?>
 		<div class="entry-content">
-			
+
+			<!--<a href="?e=emap"><button class="defaultBtn">Events Map</button></a>-->
 			<input id="pp-events-search-toggle" type="submit" value="<?php  _e( ' Events Search ', 'bp-simple-events' ); ?>">
 			
-			&nbsp;<a class="generic button" href="?e=emap">Events Map</a>
-			
-				
+			<!--<a class="generic button" href="?e=emap">Events Map</a>-->
 			<script type="text/javascript">
 				jQuery(document).ready(function($) {
 					
@@ -201,6 +204,7 @@ $wp_query = new WP_Query( $args );
 
 				<br/>
 				<div class="entry-content">
+				
 					<h2 class="entry-title">
 						<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
 						<?php the_title(); ?></a>
@@ -215,13 +219,13 @@ $wp_query = new WP_Query( $args );
 					<?php echo bp_core_fetch_avatar( array( 'item_id' => $author_id ) ); ?>
 					&nbsp;<?php echo $author_name; ?></a>
 
-					<?php the_excerpt(); ?>
+					<?php //the_excerpt(); ?>
 
 					<?php
-					if ( has_post_thumbnail() ) {
+					/*if ( has_post_thumbnail() ) {
 						the_post_thumbnail( 'thumbnail' );
 						echo '<br/>';
-					}
+					}*/
 					?>
 
 					<?php
@@ -288,6 +292,4 @@ $wp_query = new WP_Query( $args );
 		</div><!-- buddypress -->
 	</div><!-- #content -->
 </div><!-- #primary -->
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
