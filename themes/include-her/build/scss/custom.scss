@@ -532,12 +532,12 @@ FORUM PAGE
 -----------------------*/
 
 #buddypress {
-  margin: $headerHeight 80px 0 80px;
+  margin: $headerHeight 80px $footerHeight 80px;
   background-color: white; 
   padding: 40px;
   min-height: 550px;
 }
-#bbpress-forums {
+#bbpress-forums { 
   //margin: $headerHeight 80px 0 80px;
   margin: 10px 0;
   background-color: white;
@@ -848,5 +848,11 @@ EVENTS
 }
 .containerEvents {
   margin-top: 0!important;
-
+}
+.searchEventInput {
+  border: 0!important; 
+  border-radius: 5px!important;
+  background-color: $lightGray!important;
+  margin: 0 0 10px 0;
+  padding: 3px!important;
 }
