@@ -112,19 +112,19 @@ $wp_query = new WP_Query( $args );
 				
 					<div>
 						<label><?php echo __( 'Title / Description', 'bp-simple-events' ); ?></label>
-						<input type="text" name="event-search-text" id="event-search-text" placeholder="<?php echo __( 'Enter key words...', 'bp-simple-events' ); ?>" value="">
+						<input type="text" class="searchEventInput" name="event-search-text" id="event-search-text" placeholder="<?php echo __( 'Enter key words...', 'bp-simple-events' ); ?>" value="">
 						<input type="hidden" name="event-search-text-2" value="1">
 					</div>				
 				
 					<div>
 						<label><?php echo __( 'Date', 'bp-simple-events' ); ?></label>
-						<input type="text" id="event-search-date" name="event-search-date" placeholder="<?php echo __( 'Start...', 'bp-simple-events' ); ?>" value="" />
-						<input type="text" id="event-search-date-end" name="event-search-date-end" placeholder="<?php echo __( 'End...', 'bp-simple-events' ); ?>" value="" />
+						<input type="text" class="searchEventInput" id="event-search-date" name="event-search-date" placeholder="<?php echo __( 'Start...', 'bp-simple-events' ); ?>" value="" />
+						<input type="text" class="searchEventInput" id="event-search-date-end" name="event-search-date-end" placeholder="<?php echo __( 'End...', 'bp-simple-events' ); ?>" value="" />
 					</div>			
 				
 					<div>
 						<label><?php echo __( 'Location', 'bp-simple-events' ); ?></label>
-						<input type="text" name="event-search-location" id="event-search-location" placeholder="<?php echo __( 'Enter City or State or Postal Code...', 'bp-simple-events' ); ?>" value="">
+						<input type="text" class="searchEventInput" name="event-search-location" id="event-search-location" placeholder="<?php echo __( 'Enter City or State or Postal Code...', 'bp-simple-events' ); ?>" value="">
 					</div>
 					
 					<div>
@@ -204,44 +204,41 @@ $wp_query = new WP_Query( $args );
 
 				<br/>
 				<div class="entry-content">
-				
+
 					<h2 class="entry-title">
+						<?php the_category(', ') ?>:
 						<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
 						<?php the_title(); ?></a>
 					</h2>
+					<h6 class="subTitleEvent">
+						<?php
+						$author_id = get_the_author_meta('ID');
+						$author_name = get_the_author_meta('display_name');
+						?>
 
+						<a href="<?php echo bp_core_get_user_domain( $author_id ); ?>">
+						<?php ( array( 'item_id' => $author_id ) ); ?>
+						Organizer: <?php echo $author_name; ?></a>
+					</h6>
+					<h6 class="subTitleEvent">		
 					<?php
-					$author_id = get_the_author_meta('ID');
-					$author_name = get_the_author_meta('display_name');
+					$meta = get_post_meta($post->ID );
+					if( ! empty( $meta['event-date'][0] ) )
+						echo __( '', 'bp-simple-events' ) . '' . $meta['event-date'][0];
 					?>
-
-					<a href="<?php echo bp_core_get_user_domain( $author_id ); ?>">
-					<?php echo bp_core_fetch_avatar( array( 'item_id' => $author_id ) ); ?>
-					&nbsp;<?php echo $author_name; ?></a>
-
-					<?php //the_excerpt(); ?>
-
-					<?php
-					/*if ( has_post_thumbnail() ) {
-						the_post_thumbnail( 'thumbnail' );
-						echo '<br/>';
-					}*/
-					?>
-
+					</h6>
+					<h6 class="subTitleEvent">
 					<?php
 					$meta = get_post_meta($post->ID );
 
-					if( ! empty( $meta['event-date'][0] ) )
-						echo __( 'Date', 'bp-simple-events' ) . ':&nbsp;' . $meta['event-date'][0];
-
 					if( ! empty( $meta['event-time'][0] ) )
-						echo '<br/>' . __( 'Time', 'bp-simple-events' ) . ':&nbsp;' . $meta['event-time'][0];
+						echo '' . __( '', 'bp-simple-events' ) . '' . $meta['event-time'][0];
 
 					if( ! empty( $meta['event-address'][0] ) )
-						echo '<br/>' . __( 'Location', 'bp-simple-events' ) . ':&nbsp;' . $meta['event-address'][0];
+						echo '' . __( '', 'bp-simple-events' ) . '' . $meta['event-address'][0];
 
 					if( ! empty( $meta['event-url'][0] ) )
-						echo '<br/>' . __( 'Url', 'bp-simple-events' ) . ':&nbsp;' . pp_event_convert_url( $meta['event-url'][0] );
+						echo '' . __( 'Url', 'bp-simple-events' ) . ':&nbsp;' . pp_event_convert_url( $meta['event-url'][0] );
 
 					if( ! empty( $meta['event-groups'] ) ) {
 
@@ -267,10 +264,17 @@ $wp_query = new WP_Query( $args );
 						}
 					}
 					?>
+					</h6>
+					
 
-					<br/>
-					Category: <?php the_category(', ') ?>
+					<?php //the_excerpt(); ?>
 
+					<?php
+					/*if ( has_post_thumbnail() ) {
+						the_post_thumbnail( 'thumbnail' );
+						echo '<br/>';
+					}*/
+					?>
 
 				</div><!-- .entry-content -->
 
