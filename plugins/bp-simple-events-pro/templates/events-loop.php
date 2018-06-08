@@ -75,6 +75,7 @@ $wp_query = new WP_Query( $args );
 		<div id='buddypress' class="containerEvents">
 		<!-- Events Search -->
 		<?php include("eventsMap.php");?>
+		<div class="container">
 		<div class="entry-content">
 
 			<!--<a href="?e=emap"><button class="defaultBtn">Events Map</button></a>-->
@@ -203,10 +204,18 @@ $wp_query = new WP_Query( $args );
 			<?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>
 
 				<br/>
-				<div class="entry-content">
-
-					<h2 class="entry-title">
-						<?php the_category(', ') ?>:
+				<div class="entry-content rowItemEvent">
+				<div class="imageItemEvent">
+				<?php
+					if ( has_post_thumbnail() ) {
+						the_post_thumbnail( 'thumbnail' );
+						echo '<br/>';
+					}
+					?>
+				</div>
+				<div class="descriptionItemEvent">
+				<h2 class="entry-title">
+						<?php// the_category(', ') ?>
 						<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>">
 						<?php the_title(); ?></a>
 					</h2>
@@ -265,16 +274,13 @@ $wp_query = new WP_Query( $args );
 					}
 					?>
 					</h6>
+				</div>					
+					
 					
 
 					<?php //the_excerpt(); ?>
 
-					<?php
-					/*if ( has_post_thumbnail() ) {
-						the_post_thumbnail( 'thumbnail' );
-						echo '<br/>';
-					}*/
-					?>
+					
 
 				</div><!-- .entry-content -->
 
@@ -292,6 +298,8 @@ $wp_query = new WP_Query( $args );
 
 
 		<?php wp_reset_postdata(); ?>
+		</div>
+		
 
 		</div><!-- buddypress -->
 	</div><!-- #content -->

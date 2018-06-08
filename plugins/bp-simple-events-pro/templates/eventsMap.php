@@ -50,7 +50,6 @@ if ( $events_query->have_posts() ) {
 wp_reset_postdata();
 
 ?>
-
 			<?php do_action( 'bp_before_events_map' ); ?>
 				<div class="entry-content">
 					<?php if ( $events_query->post_count > 0 ) : ?>
@@ -73,6 +72,127 @@ wp_reset_postdata();
 							var map_<?php echo $map_id; ?>;
 
 							var latLongMap = new Object();
+							var styledMapType = new google.maps.StyledMapType(
+
+//YH
+//Fade with yellow    
+//shift worker    
+[
+    {
+        "stylers": [
+            {
+                "saturation": -100
+            },
+            {
+                "gamma": 1
+            }
+        ]
+    },
+    {
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.business",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.business",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.place_of_worship",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.place_of_worship",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "stylers": [
+            {
+                "visibility": "on"
+            },
+            {
+                "saturation": 50
+            },
+            {
+                "gamma": 0
+            },
+            {
+                "hue": "#50a5d1"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.neighborhood",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "color": "#333333"
+            }
+        ]
+    },
+    {
+        "featureType": "road.local",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "weight": 0.5
+            },
+            {
+                "color": "#333333"
+            }
+        ]
+    },
+    {
+        "featureType": "transit.station",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "gamma": 1
+            },
+            {
+                "saturation": 50
+            }
+        ]
+    }
+],
+            {name: 'Styled Map'});
 
 							function readLatLongMap( key ) {
 								return latLongMap[key];
@@ -159,6 +279,9 @@ wp_reset_postdata();
 								var center = map.getCenter();
 								google.maps.event.trigger(map, "resize");
 								map.setCenter(center);
+								//Associate the styled map with the MapTypeId and set it to display.
+								map.mapTypes.set('styled_map', styledMapType);
+								map.setMapTypeId('styled_map');
 							});
 
 
