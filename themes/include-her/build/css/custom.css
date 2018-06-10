@@ -10,6 +10,8 @@ button {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   cursor: pointer; }
+  button:hover {
+    opacity: 0.7; }
 
 h1, h2, h3 {
   font-family: "Oswald", sans-serif;
@@ -18,7 +20,8 @@ h1, h2, h3 {
 a {
   color: black; }
   a:hover {
-    color: gray; }
+    color: gray;
+    text-decoration: none !important; }
 
 ul {
   padding: 0; }
@@ -57,6 +60,9 @@ main {
 .gray {
   background-color: #d5d5d5; }
 
+.full {
+  width: 100% !important; }
+
 /*-----------------------
 Background colors main
 -----------------------*/
@@ -87,7 +93,7 @@ Background colors main
 .bp-user {
   background-color: #E4BCB2; }
 
-.event-template-default, .events, .page-id-130 {
+.event-template-default, .events, .page-id-130, .category {
   background-color: #222D63; }
 
 /*-----------------------
@@ -219,7 +225,7 @@ FEATURE (TOP IMAGE ON EVERY PAGE)
     text-transform: uppercase; }
 
 .featureEvents {
-  background-image: url("../../build/images/feature-image-events.jpg"); }
+  background-image: url("../../build/images/feature-meetup.jpg"); }
 
 .featureBtn {
   margin: 30px;
@@ -418,18 +424,23 @@ LOGIN PAGE
 .defaultBtn {
   width: 100%;
   margin: 20px 0;
-  padding: 15px;
+  padding: 7px 12px;
   text-transform: uppercase;
   border-radius: 5px;
   font-size: 1.1em;
   font-family: "Oswald", sans-serif;
-  border: 0; }
+  border: 0 !important;
+  color: black; }
 
 .yellowBtn {
   background-color: #f8da79; }
 
 .pinkBtn {
-  background-color: #F0D5CE; }
+  background-color: #E4BCB2; }
+
+.blueBtn {
+  background-color: #222D63 !important;
+  color: white !important; }
 
 .tml h2 {
   text-transform: uppercase;
@@ -472,7 +483,7 @@ FORUM PAGE
 .button {
   background-color: #f8da79;
   text-transform: uppercase;
-  font-family: "Oswald", sans-serif;
+  font-family: "Roboto Mono", monospace;
   border: 0;
   height: auto;
   width: auto;
@@ -480,7 +491,7 @@ FORUM PAGE
   border-radius: 5px; }
 
 #bbp_search {
-  height: 30px; }
+  height: 32px; }
 
 .headingForumRow {
   margin-bottom: 20px; }
@@ -581,15 +592,17 @@ PROFILE PAGE
 #buddypress input[type=submit] {
   text-transform: uppercase;
   font-family: "Oswald", sans-serif;
-  border: 0;
+  border: 0 !important;
   border-radius: 5px;
   font-size: 1em;
-  padding: 7px 12px;
   background-color: #E4BCB2;
   color: black;
   margin: 0;
   height: auto;
   width: auto; }
+
+#messages_search {
+  height: 32px; }
 
 /*-----------------------
 CONTACT PAGE
@@ -610,7 +623,7 @@ CONTACT PAGE
         margin-right: 10px; }
 
 .rightItemContact {
-  padding: 50px;
+  padding: 100px;
   text-align: center; }
   .rightItemContact h2 {
     text-transform: uppercase;
@@ -649,7 +662,16 @@ CONTACT PAGE
   font-size: 1.1em;
   color: black;
   border-radius: 5px;
-  border: 0; }
+  border: 0;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transform: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  .wpcf7-submit:hover {
+    background-color: #f5cd49;
+    color: white; }
 
 /*-----------------------
 404 PAGE
@@ -711,12 +733,12 @@ INSTAGRAM FEED
 EVENTS
 -----------------------*/
 .singleEventContent {
-  text-align: center;
-  margin-bottom: 200px; }
+  text-align: center; }
 
 .eventTitle {
   text-transform: uppercase;
-  font-family: "Oswald", sans-serif; }
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 30px; }
 
 .eventTitleList {
   font-size: 1.5em;
@@ -742,6 +764,98 @@ EVENTS
 .searchEventInput {
   border: 0 !important;
   border-radius: 5px !important;
+  background-color: #fff !important;
+  margin: 0 0 15px 0;
+  padding: 7px 10px !important;
+  font-size: 1em !important;
+  font-family: "Roboto Mono", monospace !important; }
+
+.archivePage {
+  margin: 0 80px 0 80px;
+  padding: 200px;
+  background-color: white; }
+
+.imageRowSingleEvent img {
+  width: 100%; }
+
+.eventSingleItem {
+  text-align: left;
+  padding: 15px; }
+  .eventSingleItem h5 {
+    font-size: 1.2em;
+    color: #222D63;
+    font-family: "Roboto Mono", monospace;
+    margin: 30px 0 15px 0; }
+
+.attendingItem {
+  text-align: left; }
+
+.attendingItemButton {
+  text-align: right; }
+
+#event-attend-submit {
+  background-color: #222D63 !important;
+  color: #fff !important;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transform: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: 100% !important;
+  border: 0 !important;
+  padding: 10px; }
+  #event-attend-submit:hover {
+    opacity: 0.7; }
+
+.rowItemEvent {
+  display: flex; }
+
+.descriptionItemEvent {
+  padding: 0 0 0 30px; }
+
+#pp-events-search-toggle {
+  background-color: #222D63 !important;
+  color: #fff !important;
+  width: 100% !important;
+  border: 0 !important;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transform: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  #pp-events-search-toggle:hover {
+    opacity: 0.7; }
+
+#pp-events-search {
+  background-color: #F5F5F5;
+  padding: 15px; }
+  #pp-events-search input {
+    width: 100% !important;
+    font-family: "Roboto Mono", monospace; }
+
+.searchEventBtn {
+  width: 100% !important;
+  border: 0 !important;
+  background-color: #E4BCB2 !important;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transform: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out; }
+  .searchEventBtn:hover {
+    opacity: 0.7; }
+
+.createEventInput {
+  width: 100% !important;
+  border: 0 !important;
   background-color: #F5F5F5 !important;
-  margin: 0 0 10px 0;
-  padding: 3px !important; }
+  padding: 7px 10px !important;
+  border-radius: 5px !important; }
+
+.warning {
+  background-color: #fefbf2 !important;
+  border-color: #f8da79 !important;
+  /*brandYellow*/ }
