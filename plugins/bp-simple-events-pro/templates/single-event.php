@@ -61,6 +61,7 @@ get_header();
 					?>
 				<div class="row">
 					<div class="col-md-6 eventSingleItem">
+					<h5>Event Informtion</h5>
 					<?php
 
 					if( ! empty( $meta['event-date'][0] ) )
@@ -105,14 +106,7 @@ get_header();
 					<a href="<?php echo bp_core_get_user_domain( $author_id ); ?>">
 						<?php //echo bp_core_fetch_avatar( array( 'item_id' => $author_id, 'type' => 'thumb' ) ); ?>
 						Organizer: <?php echo $author_name; ?></a>
-						</div>
-					<div class="col-md-6 eventSingleItem">
-						<?php the_content(); ?>
-					</div>
-				</div>
-				<div class="row attendingRow">
-				<div class="col-md-12">
-				<?php
+						<?php
 				// Show the list of attendees if 'show list of attendees' was selected when creating or editing Event
 				$show_list = false;
 				if( ! empty( $meta['event-attendees-list'][0] ) ) 
@@ -128,9 +122,10 @@ get_header();
 						$attendees = maybe_unserialize( $attendees );
 
 						if( ! empty( $attendees ) ) {
-
-							echo '<br/>' . __( 'Attendees:', 'bp-simple-events' );
-							
+							?>
+							<h5>Attendees:</h5>
+							<!--echo '<br/>' . __( 'Attendees:', 'bp-simple-events' );-->
+							<?php
 							$attendee_list_names = array();
 
 							foreach( $attendees as $attendee ) {
@@ -156,6 +151,15 @@ get_header();
 
 				}
 				?>
+						</div>
+					<div class="col-md-6 eventSingleItem">
+						<h5>Description</h5>
+						<?php the_content(); ?>
+					</div>
+				</div>
+				<div class="row attendingRow">
+				<div class="col-md-12">
+
 				</div>
 				<div class="col-md-12">
 					<?php

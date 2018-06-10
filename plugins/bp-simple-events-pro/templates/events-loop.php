@@ -67,7 +67,8 @@ $wp_query = new WP_Query( $args );
 ?>
 <div class="feature featureEvents">
 <div class="featureCaption">
-        <h1>Upcoming events</h1>
+        <h1>Did you know all our members can create own events?</h1>
+		<button type="button" class="btn featureBtn blueBtn">Create an event</button>
     </div>
 </div>
 <div id="primary" class="content-area">
@@ -77,7 +78,7 @@ $wp_query = new WP_Query( $args );
 		<?php include("eventsMap.php");?>
 		<div class="container">
 		<div class="entry-content">
-
+			<button class="defaultBtn pinkBtn full">Create an event <i class="fas fa-angle-double-right"></i></button>
 			<!--<a href="?e=emap"><button class="defaultBtn">Events Map</button></a>-->
 			<input id="pp-events-search-toggle" type="submit" value="<?php  _e( ' Events Search ', 'bp-simple-events' ); ?>">
 			
@@ -109,28 +110,28 @@ $wp_query = new WP_Query( $args );
 		  
 			<div id="pp-events-search" style="display:none">
 		
-				<form action="" method="POST" id="pp_events_search_form" class="standard-form">
+				<form action="" method="POST" id="pp_events_search_form" class="standard-form searchForm">
 				
 					<div>
-						<label><?php echo __( 'Title / Description', 'bp-simple-events' ); ?></label>
-						<input type="text" class="searchEventInput" name="event-search-text" id="event-search-text" placeholder="<?php echo __( 'Enter key words...', 'bp-simple-events' ); ?>" value="">
+						<!--<label><?php //echo __( 'Title / Description', 'bp-simple-events' ); ?></label>-->
+						<input type="text" class="searchEventInput" name="event-search-text" id="event-search-text" placeholder="<?php echo __( 'Enter keywords..', 'bp-simple-events' ); ?>" value="">
 						<input type="hidden" name="event-search-text-2" value="1">
 					</div>				
 				
 					<div>
-						<label><?php echo __( 'Date', 'bp-simple-events' ); ?></label>
-						<input type="text" class="searchEventInput" id="event-search-date" name="event-search-date" placeholder="<?php echo __( 'Start...', 'bp-simple-events' ); ?>" value="" />
-						<input type="text" class="searchEventInput" id="event-search-date-end" name="event-search-date-end" placeholder="<?php echo __( 'End...', 'bp-simple-events' ); ?>" value="" />
+						<!--<label><?php //echo __( 'Date', 'bp-simple-events' ); ?></label>-->
+						<input type="text" class="searchEventInput" id="event-search-date" name="event-search-date" placeholder="<?php echo __( 'Enter Start date ..', 'bp-simple-events' ); ?>" value="" />
+						<input type="text" class="searchEventInput" id="event-search-date-end" name="event-search-date-end" placeholder="<?php echo __( 'Enter End date ..', 'bp-simple-events' ); ?>" value="" />
 					</div>			
 				
 					<div>
-						<label><?php echo __( 'Location', 'bp-simple-events' ); ?></label>
-						<input type="text" class="searchEventInput" name="event-search-location" id="event-search-location" placeholder="<?php echo __( 'Enter City or State or Postal Code...', 'bp-simple-events' ); ?>" value="">
+						<!--<label><?php //echo __( 'Location', 'bp-simple-events' ); ?></label>-->
+						<input type="text" class="searchEventInput" name="event-search-location" id="event-search-location" placeholder="<?php echo __( 'Enter City, State or Post Code..', 'bp-simple-events' ); ?>" value="">
 					</div>
 					
 					<div>
-						<label><?php echo __( 'Categories', 'bp-simple-events' ); ?></label>
-						<select multiple name="event-search-categories[]" id="event-search-categories">
+						<!--<label><?php //echo __( 'Categories', 'bp-simple-events' ); ?></label>-->
+						<select name="event-search-categories[]" id="event-search-categories">
 							<option value="0"/><?php echo __( 'Select...', 'bp-simple-events' ); ?></option>;
 							<?php
 								$args = array(
@@ -164,7 +165,7 @@ $wp_query = new WP_Query( $args );
 					</div>			
 					
 					<div class="submit">
-						<input type="submit" value="<?php echo __( ' Search Events ', 'bp-simple-events' ); ?>">
+						<input type="submit" class="searchEventBtn" value="<?php echo __( ' Search Events ', 'bp-simple-events' ); ?>">
 					</div>
 					
 					<input type="hidden" name="events-searching" value="1">

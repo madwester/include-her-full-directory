@@ -855,8 +855,10 @@ div.indicator-hint {
 	padding: 0 0.6em;
 	margin: 5px 0 15px;
 	border-radius: 3px;
-	background-color: #ffffe0;
-	border-color: #e6db55;
+	/*background-color: #ffffe0;
+	border-color: #e6db55;*/
+	background-color: #fefbf2;
+	border-color: rgb(248, 218, 121); /*brandYellow*/
 	color: #000;
 	clear: both;
 }
@@ -868,8 +870,11 @@ div.bbp-template-notice a {
 		color: #000;
 	}
 	div.bbp-template-notice.info {
-		border: #cee1ef 1px solid;
-		background-color: #f0f8ff;
+		/*border: #cee1ef 1px solid;
+		background-color: #f0f8ff;*/
+		border: #222D63 1px solid;
+		background-color: #f0f2fa;
+
 	}
 	div.bbp-template-notice.important {
 		border: #e6db55 1px solid;

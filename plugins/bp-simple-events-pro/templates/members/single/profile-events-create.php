@@ -13,33 +13,33 @@ $required_fields = get_option( 'pp_events_required' );
 <form id="profile-event-form" name="profile-event-form" method="post" action="" class="standard-form" enctype="multipart/form-data">
 
 	<p>
-		<label for="event-title"><?php echo __( 'Title', 'bp-simple-events' ); ?>: *</label>
-		<input type="text" id="event-title" name="event-title" value="<?php echo $pp_ec->title; ?>" />
+		<!--<label for="event-title"><?php //echo __( 'Title', 'bp-simple-events' ); ?>: *</label> -->
+		<input type="text" id="event-title" class="createEventInput" name="event-title" placeholder="Add your title *" value="<?php echo $pp_ec->title; ?>" />
 	</p>
 
 	<p>
-		<label for="event-description"><?php echo __( 'Description', 'bp-simple-events' ); ?>: *</label>
-		<textarea id="event-description" name="event-description" ><?php echo $pp_ec->description; ?></textarea>
+		<!--<label for="event-description"><?php //echo __( 'Description', 'bp-simple-events' ); ?>: *</label>-->
+		<textarea id="event-description" class="createEventInput" name="event-description" placeholder="Add your description *" ><?php echo $pp_ec->description; ?></textarea>
 	</p>
 
 	<p>
-		<label for="event-date"><?php echo __( 'Start', 'bp-simple-events' ); ?>: <?php if( in_array('date', $required_fields) ) echo __( '*', 'bp-simple-events' ); ?></label>
-		<input type="text" id="event-date" name="event-date" placeholder="<?php echo __( 'Click to add Start Date...', 'bp-simple-events' ); ?>" value="<?php echo $pp_ec->date; ?>" />
+		<!--<label for="event-date"><?php// echo __( 'Start', 'bp-simple-events' ); ?>: <?php if( in_array('date', $required_fields) ) echo __( '*', 'bp-simple-events' ); ?></label>-->
+		<input type="text" id="event-date" class="createEventInput" name="event-date" placeholder="<?php echo __( 'Click to add Start Date ', 'bp-simple-events' ); ?>" value="<?php echo $pp_ec->date; ?>" />
 	</p>
 
 	<p>
-		<label for="event-date-end"><?php echo __( 'End', 'bp-simple-events' ); ?>: <?php if( in_array('date-end', $required_fields) ) echo __( '*', 'bp-simple-events' ); ?></label>
-		<input type="text" id="event-date-end" name="event-date-end" placeholder="<?php echo __( 'Click to add End Date...', 'bp-simple-events' ); ?>" value="<?php echo $pp_ec->date_end; ?>" />
+		<!--<label for="event-date-end"><?php //echo __( 'End', 'bp-simple-events' ); ?>: <?php if( in_array('date-end', $required_fields) ) echo __( '*', 'bp-simple-events' ); ?></label>-->
+		<input type="text" id="event-date-end" class="createEventInput" name="event-date-end" placeholder="<?php echo __( 'Click to add End Date ', 'bp-simple-events' ); ?>" value="<?php echo $pp_ec->date_end; ?>" />
 	</p>
 
 	<p>
-		<label for="event-location"><?php echo __( 'Location', 'bp-simple-events' ); ?>: <?php if( in_array('location', $required_fields) ) echo __( '*', 'bp-simple-events' ); ?></label>
-		<input type="text" id="event-location" name="event-location" placeholder="<?php echo __( 'Start typing location name...', 'bp-simple-events' ); ?>" value="<?php echo $pp_ec->address; ?>" />
+		<!--<label for="event-location"><?php //echo __( 'Location', 'bp-simple-events' ); ?>: <?php //if( in_array('location', $required_fields) ) echo __( '*', 'bp-simple-events' ); ?></label>-->
+		<input type="text" id="event-location" class="createEventInput" name="event-location" placeholder="<?php echo __( 'Start typing for location name ', 'bp-simple-events' ); ?>" value="<?php echo $pp_ec->address; ?>" />
 	</p>
 
 	<p>
-		<label for="event-url"><?php echo __( 'Url', 'bp-simple-events' ); ?>: <?php if( in_array('url', $required_fields) ) echo __( '*', 'bp-simple-events' ); ?></label>
-		<input type="text" size="80" id="event-url" name="event-url" placeholder="<?php echo __( 'Add an Event-related Url...', 'bp-simple-events' ); ?>" value="<?php echo $pp_ec->url; ?>" />
+		<!--<label for="event-url"><?php //echo __( 'Url', 'bp-simple-events' ); ?>: <?php //if( in_array('url', $required_fields) ) echo __( '*', 'bp-simple-events' ); ?></label>-->
+		<input type="text" size="80" id="event-url" class="createEventInput" name="event-url" placeholder="<?php echo __( 'Add an Event-related Url ', 'bp-simple-events' ); ?>" value="<?php echo $pp_ec->url; ?>" />
 	</p>
 
 	<?php
@@ -137,8 +137,8 @@ $required_fields = get_option( 'pp_events_required' );
 	<?php if( ! $pp_ec->editor ) : ?>
 
 		<p>
-			<label for="event-img"><?php echo __( 'Image ( jpg only  )', 'bp-simple-events' ); ?>: <?php if( in_array('image', $required_fields) ) echo __( '*', 'bp-simple-events' ); ?></label>
-			<input type="file" id="event-img" class="addImageBtn" name="event-img" value="">
+			<label for="event-img"><?php echo __( 'Image (jpg only)', 'bp-simple-events' ); ?>: <?php if( in_array('image', $required_fields) ) echo __( '*', 'bp-simple-events' ); ?></label>
+			<input type="file" id="event-img" class="addImageBtn" name="event-img" value="Choose Image jpg only">
 			&nbsp;&nbsp;<input onclick="clearFileInput('event-img')" type="button" value="Remove" />
 		</p>
 
@@ -171,6 +171,6 @@ $required_fields = get_option( 'pp_events_required' );
 	<input type="hidden" name="eid" value="<?php echo $pp_ec->post_id; ?>" />
 	<?php wp_nonce_field( 'event-nonce' ); ?>
 
-	<input type="submit" name="submit" class="button button-primary" value="<?php echo __(' SAVE ', 'bp-simple-events'); ?>"/>
+	<input type="submit" name="submit" class="btnDefault full blueBtn" value="<?php echo __(' SAVE ', 'bp-simple-events'); ?>"/>
 
 </form>
