@@ -4,12 +4,14 @@
 //@import '/compontents/bootstrap/scss/mixins/breakpoints.scss';
 //@import '/compontents/bootstrap/scss/variables.scss';
 
+// MEDIA SIZES 
+@include media ("(min-width: #{$screen-lg + 1})") {}
+@include media ("(min-width: #{$screen-md + 1}) and (max-width: #{$screen-lg})") {}
 
 //@include box-shadow(2px 2px 3px 0px rgba(184,184,184,1));
 /*-----------------------
 GENERICS
 -----------------------*/
-
 button {
   font-family: $oswald;
   @include ease-animation(0.3s);
@@ -135,10 +137,11 @@ NAVBAR
   background-color: rgba(255, 255, 255, 0.9); 
   padding: 15px 25px;
   height: $headerHeight;
-  @include respondTo('md') {
-    position: fixed;
+  //will change when going past 991px
+  @include media ("(max-width: #{$screen-md})") {
+    //position: fixed;
     height: auto;
-    background-color: white;
+    //background-color: white;
     top: 0;
   }
 }
@@ -177,7 +180,7 @@ NAVBAR
   }
 }
 
-@media only screen and (max-width: 991px) {
+@include media ("(max-width: #{$screen-md})") {
   .navbar-brand {
     img {
       width: 50%;
@@ -231,20 +234,20 @@ FEATURE (TOP IMAGE ON EVERY PAGE)
     font-size: 3.3em;
     letter-spacing: 1px; //0px is default 
   }
-  @include respondTo('lg'){
-    height: 750px;
-  }
-  @include respondTo('md'){
-    margin-top: 70px;
+  @include media ("(max-width: #{$screen-lg})") {
     height: 600px;
   }
-  @include respondTo('sm'){
+  @include media ("(max-width: #{$screen-md})") {
+    margin-top: 70px;
+    height: 600px; 
+  }
+  @include media ("(max-width: #{$screen-sm})") {
     height: 400px;
     h1 {
       font-size: 2em;
     }
   }
-  @include respondTo('xs'){
+  @include media ("(max-width: #{$screen-xs})") {
     height: 300px;
     h1 {
       font-size: 1.5em;
@@ -276,7 +279,7 @@ FEATURE (TOP IMAGE ON EVERY PAGE)
   text-transform: uppercase;
   font-size: 1.4em;
   padding: 10px 40px;
-  @include respondTo('md'){
+  @include media ("(max-width: #{$screen-md})") {
     margin: 10px;
     font-size: 1.2em;
     padding: 10px 20px;
@@ -294,7 +297,7 @@ HOME PAGE
 .flexRow {
   display: flex;
   flex-direction: row;
-  @include respondTo('sm'){
+  @include media ("(max-width: #{$screen-sm})") {
     flex-direction: column;
   }
 }
@@ -334,7 +337,7 @@ HOME PAGE
     margin: 10px 0 30px 0;
     font-size: 1.3em;
   }
-  @include respondTo('md'){
+  @include media ("(max-width: #{$screen-md})") {
     margin: 0;
     width: 100%;
   }
@@ -365,7 +368,7 @@ HOME PAGE
   border: 2px solid $black;
   color: $black;
 }
-@media only screen and (min-width: 767px) and (max-width: 991px) {
+@include media ("(min-width: #{$screen-sm + 1}) and (max-width: #{$screen-md})") {
   .homepageItem {
     //padding: 20px;
     //font-size: 0.9em;
@@ -398,10 +401,17 @@ HOME PAGE
   h2 {
     font-family: $oswald;
     margin-bottom: 15px;
+    @include media ("(max-width: #{$screen-sm})"){
+      font-size: 1.7em;
+    }
   }
   h4 {
     font-family: $roboto-mono;
+    @include media ("(max-width: #{$screen-sm})"){
+      font-size: 1.2em;
+    }
   }
+
 }
 .carouselCaption {
 
@@ -442,7 +452,7 @@ footer {
   margin-top: -$footerHeight;
   padding: 30px 40px 20px 40px;
   background-color: $lightGray;
-  @include respondTo('sm'){
+  @include media ("(max-width: #{$screen-sm})"){
     padding: 20px 30px;
     height: $footerHeightSm;
   }
@@ -455,7 +465,7 @@ footer {
   p {
     font-size: 0.9em;
   }
-  @include respondTo('sm'){
+  @include media ("(max-width: #{$screen-sm})"){
     width: 100%;
     text-align: center; 
     img {
@@ -485,7 +495,7 @@ footer {
       }
     }
   }
-  @include respondTo('sm'){
+  @include media ("(max-width: #{$screen-sm})"){
     margin: 20px 0 0 0;
   }
 }
@@ -548,6 +558,9 @@ FORUM PAGE
   background-color: white; 
   padding: 40px;
   min-height: 550px;
+  @include media ("(max-width: #{$screen-md})"){
+    margin-top: 88px;
+  }
 }
 #bbpress-forums { 
   //margin: $headerHeight 80px 0 80px;
@@ -591,7 +604,6 @@ FORUM PAGE
     border-radius: 3px;
     background-color: $brandBlue;
     display: inline-block;
-
   }
 }
 .bbp-header {
@@ -797,19 +809,19 @@ INSTAGRAM FEED
 }
 #instafeed {
   display: table;
-  margin: 150px auto 300px auto;
+  margin: 100px auto 300px auto;
   position: relative;
 }
 .instaimg {
   position: relative;
   display: inline;
-  margin: 10px;
   li {
     display: inline;
   }
   a {
     position: relative; 
     display: inline-block;
+    margin: 10px;
   }
   img {
     display: inline-block;
@@ -818,6 +830,24 @@ INSTAGRAM FEED
     overflow: hidden;
   }
 }
+@media only screen and (max-width: 767px){
+  #instafeed {
+    width: 480px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1500px){
+  #instafeed {
+    width: 730px;
+  }
+}
+@media only screen and (max-width: 1500px) {
+  .instaimg {
+    a {
+      margin: 5px;
+    }
+  }
+}
+
 .likes {
   background-color: rgba(34, 45, 99, 0.7);
   position: absolute;
@@ -894,7 +924,6 @@ EVENTS
 .eventSingleItem {
   text-align: left;
   padding: 15px;
-  //margin-top: 20px;
   h5 {
     font-size: 1.2em;
     color: $brandBlue;
@@ -964,8 +993,6 @@ EVENTS
     padding: 7px 10px!important;
     border-radius: 5px!important;
 }
-
-
 .warning {
   background-color: #fefbf2!important;
 	border-color: $brandYellow!important; /*brandYellow*/

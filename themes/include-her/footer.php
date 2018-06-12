@@ -29,7 +29,7 @@
       <hr> 
       <div class="flexRow">
         <div class="itemFoot">
-          <p>Copyright &copy;	2017. All rights reserved.</p>
+          <p>Copyright &copy;	2018. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -42,7 +42,7 @@ get_header();
 				</div>
 				<div class="carousel-item pink">
 					<div class="carouselCaption">
-						<h2>Here's a fun fact (or depressing)!</h2>
+						<h2>Here's a fun fact</h2>
 						<h4>Out of every 100 software developers/engineers in <br>Los Angeles, approximately 10-12 are female.</h4>
 					</div>
 				</div>

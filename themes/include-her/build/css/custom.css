@@ -117,9 +117,7 @@ NAVBAR
   height: 120px; }
   @media (max-width: 991px) {
     .navbar {
-      position: fixed;
       height: auto;
-      background-color: white;
       top: 0; } }
 
 .navigationSymbol {
@@ -148,7 +146,7 @@ NAVBAR
   .navBtn:hover {
     background-color: #E4BCB2; }
 
-@media only screen and (max-width: 991px) {
+@media (max-width: 991px) {
   .navbar-brand img {
     width: 50%; }
   .nav-link {
@@ -192,9 +190,9 @@ FEATURE (TOP IMAGE ON EVERY PAGE)
     color: #fff;
     font-size: 3.3em;
     letter-spacing: 1px; }
-  @media (max-width: 1199px) {
+  @media (max-width: 1200px) {
     .feature {
-      height: 750px; } }
+      height: 600px; } }
   @media (max-width: 991px) {
     .feature {
       margin-top: 70px;
@@ -204,7 +202,7 @@ FEATURE (TOP IMAGE ON EVERY PAGE)
       height: 400px; }
       .feature h1 {
         font-size: 2em; } }
-  @media (max-width: 575px) {
+  @media (max-width: 450px) {
     .feature {
       height: 300px; }
       .feature h1 {
@@ -339,8 +337,14 @@ HOME PAGE
   .carousel-item h2 {
     font-family: "Oswald", sans-serif;
     margin-bottom: 15px; }
+    @media (max-width: 767px) {
+      .carousel-item h2 {
+        font-size: 1.7em; } }
   .carousel-item h4 {
     font-family: "Roboto Mono", monospace; }
+    @media (max-width: 767px) {
+      .carousel-item h4 {
+        font-size: 1.2em; } }
 
 /*-----------------------
 ABOUT
@@ -470,6 +474,9 @@ FORUM PAGE
   background-color: white;
   padding: 40px;
   min-height: 550px; }
+  @media (max-width: 991px) {
+    #buddypress {
+      margin-top: 88px; } }
 
 #bbpress-forums {
   margin: 10px 0;
@@ -689,23 +696,35 @@ INSTAGRAM FEED
 
 #instafeed {
   display: table;
-  margin: 150px auto 300px auto;
+  margin: 100px auto 300px auto;
   position: relative; }
 
 .instaimg {
   position: relative;
-  display: inline;
-  margin: 10px; }
+  display: inline; }
   .instaimg li {
     display: inline; }
   .instaimg a {
     position: relative;
-    display: inline-block; }
+    display: inline-block;
+    margin: 10px; }
   .instaimg img {
     display: inline-block;
     width: 230px;
     height: 230px;
     overflow: hidden; }
+
+@media only screen and (max-width: 767px) {
+  #instafeed {
+    width: 480px; } }
+
+@media only screen and (min-width: 768px) and (max-width: 1500px) {
+  #instafeed {
+    width: 730px; } }
+
+@media only screen and (max-width: 1500px) {
+  .instaimg a {
+    margin: 5px; } }
 
 .likes {
   background-color: rgba(34, 45, 99, 0.7);
