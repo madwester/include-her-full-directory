@@ -1,5 +1,4 @@
 //CUSTOM.JS
-
 window.addEventListener('load', () => {
 	(function(){
 		if($("body").hasClass("events")){

@@ -106,6 +106,9 @@ Background colors main
     background-image: url('../../build/images/background-images/signup-page-darker-mobile.jpg');
   }
 }
+.page-id-80 {
+  background-color: $brandBlue;
+}
 //lost password
 .page-id-79 {
   background-color: $brandPink;
@@ -262,7 +265,7 @@ FEATURE (TOP IMAGE ON EVERY PAGE)
   @include media ("(max-width: #{$screen-xs})") {
     height: 500px;
     h1 {
-      font-size: 1.5em;
+      font-size: 1.9em;
     }
   }
 }

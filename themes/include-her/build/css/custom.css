@@ -90,6 +90,9 @@ Background colors main
     .page-id-78 {
       background-image: url("../../build/images/background-images/signup-page-darker-mobile.jpg"); } }
 
+.page-id-80 {
+  background-color: #222D63; }
+
 .page-id-79 {
   background-color: #E4BCB2; }
 
@@ -219,7 +222,7 @@ FEATURE (TOP IMAGE ON EVERY PAGE)
     .feature {
       height: 500px; }
       .feature h1 {
-        font-size: 1.5em; } }
+        font-size: 1.9em; } }
 
 .featureCaption {
   margin: auto; }
