@@ -92,6 +92,9 @@ Background colors main
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: top;
+  @include media ("(max-width: #{$screen-sm})") {
+    background-image: url('../../build/images/background-images/girl-laptop-greenchair-mobile.jpg');
+  }
 }
 //sign in
 .page-id-78 {
@@ -99,6 +102,9 @@ Background colors main
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: top;
+  @include media ("(max-width: #{$screen-sm})") {
+    background-image: url('../../build/images/background-images/signup-page-darker-mobile.jpg');
+  }
 }
 //lost password
 .page-id-79 {
@@ -121,6 +127,9 @@ NAVBAR
 .current-menu-item {
   a{
     border-bottom: 1px solid black;
+    @include media ("(max-width: #{$screen-md})") {
+      border-bottom: 0;
+    }
   }
 }
 .navbar-light .navbar-toggler { 
@@ -139,9 +148,9 @@ NAVBAR
   height: $headerHeight;
   //will change when going past 991px
   @include media ("(max-width: #{$screen-md})") {
-    //position: fixed;
+    position: relative;
     height: auto;
-    //background-color: white;
+    background-color: white;
     top: 0;
   }
 }
@@ -234,21 +243,24 @@ FEATURE (TOP IMAGE ON EVERY PAGE)
     font-size: 3.3em;
     letter-spacing: 1px; //0px is default 
   }
+  @include media ("(max-width: #{$screen-xl})") {
+    height: 800px;
+  } 
   @include media ("(max-width: #{$screen-lg})") {
     height: 600px;
   }
   @include media ("(max-width: #{$screen-md})") {
-    margin-top: 70px;
+    //margin-top: 70px;
     height: 600px; 
   }
   @include media ("(max-width: #{$screen-sm})") {
-    height: 400px;
+    height: 600px;
     h1 {
       font-size: 2em;
     }
   }
   @include media ("(max-width: #{$screen-xs})") {
-    height: 300px;
+    height: 500px;
     h1 {
       font-size: 1.5em;
     }
@@ -258,19 +270,43 @@ FEATURE (TOP IMAGE ON EVERY PAGE)
   margin: auto;
 }
 .featureHome {
-  background-image: url('../../build/images/feature-image-hp.png');
+  background-image: url('../../build/images/featureImagesDefault/feature-image-hp.png');
+  @include media ("(min-width: #{$screen-sm + 1}) and (max-width: #{$screen-md})") {
+    background-image: url('../../build/images/featureImagesDefault/md/feature-image-hp-md.jpg');
+  }
+  @include media ("(max-width: #{$screen-sm})") {
+    background-image: url('../../build/images/featureImagesDefault/mobile/feature-image-hp-mobile.jpg');
+  }
 }
 .featureAbout {
-  background-image: url('../../build/images/feature-image-two-girls.png'); 
+  background-image: url('../../build/images/featureImagesDefault/feature-image-two-girls.png'); 
+  @include media ("(min-width: #{$screen-sm + 1}) and (max-width: #{$screen-md})") {
+    background-image: url('../../build/images/featureImagesDefault/md/feature-image-two-girls-md.jpg');
+  }
+  @include media ("(max-width: #{$screen-sm})") {
+    background-image: url('../../build/images/featureImagesDefault/mobile/feature-image-two-girls-mobile.jpg');
+  }
 }
 .featureContact {
-  background-image: url('../../build/images/feature-image-contact.jpg'); 
+  background-image: url('../../build/images/featureImagesDefault/feature-image-contact.jpg'); 
   h1 {
     text-transform: uppercase;
   }
+  @include media ("(min-width: #{$screen-sm + 1}) and (max-width: #{$screen-md})") {
+    background-image: url('../../build/images/featureImagesDefault/md/feature-image-contact-md.jpg');
+  }
+  @include media ("(max-width: #{$screen-sm})") {
+    background-image: url('../../build/images/featureImagesDefault/mobile/feature-image-contact-mobile.jpg');
+  }
 }
 .featureEvents {
-  background-image: url('../../build/images/feature-meetup.jpg');  
+  background-image: url('../../build/images/featureImagesDefault/feature-meetup.jpg');  
+  @include media ("(min-width: #{$screen-sm + 1}) and (max-width: #{$screen-md})") {
+    background-image: url('../../build/images/featureImagesDefault/md/feature-meetup-md.jpg');
+  }
+  @include media ("(max-width: #{$screen-sm})") {
+    background-image: url('../../build/images/featureImagesDefault/mobile/feature-meetup-mobile.jpg');
+  }
 }
 .featureBtn {
   margin: 30px;
@@ -368,15 +404,6 @@ HOME PAGE
   border: 2px solid $black;
   color: $black;
 }
-@include media ("(min-width: #{$screen-sm + 1}) and (max-width: #{$screen-md})") {
-  .homepageItem {
-    //padding: 20px;
-    //font-size: 0.9em;
-    //margin: 10px 5px;
-    //height: 270px;
-    //color: $white;
-  }
-}
 .contactItem {
   background-image: url('../../build/images/hp-items/hp-item9.jpg'); 
   color: $brandGray;
@@ -411,7 +438,9 @@ HOME PAGE
       font-size: 1.2em;
     }
   }
-
+  @include media ("(max-width: #{$screen-sm})"){
+    padding: 30px 50px;
+  }
 }
 .carouselCaption {
 
@@ -441,6 +470,11 @@ ABOUT
   }
   i { 
     margin-left: 10px;
+  }
+  @include media ("(max-width: #{$screen-sm})"){
+    width: 90%;
+    margin: -100px auto 200px auto;
+    padding: 50px 30px 90px 30px;
   }
 }
 
@@ -527,14 +561,25 @@ LOGIN PAGE
   color: white!important;
 }
 .tml {
-	h2 {
+	h2, h3 {
     text-transform: uppercase;
     font-family: $oswald;
     margin: 0 0 50px 0;
+    @include media ("(max-width: #{$screen-sm})"){
+      margin: 0 0 30px 0;
+    }
   } 
   p {
     font-family: $roboto-mono;
     margin-bottom: 50px;
+    @include media ("(max-width: #{$screen-sm})"){
+      margin-bottom: 20px;
+    }
+  }
+  @include media ("(max-width: #{$screen-sm})"){
+    padding: 20px;
+    max-width: 300px;
+    margin: 50px auto 300px auto;
   }
 }
 #rememberme {
@@ -548,7 +593,9 @@ LOGIN PAGE
 .inputReg:focus {
   outline-color: $brandPink;
 }
-
+#wp-submit {
+  width: 100%!important;
+}
 /*-----------------------
 FORUM PAGE
 -----------------------*/
@@ -558,27 +605,30 @@ FORUM PAGE
   background-color: white; 
   padding: 40px;
   min-height: 550px;
-  @include media ("(max-width: #{$screen-md})"){
-    margin-top: 88px;
+  @include media ("(max-width: #{$screen-md})"){ 
+    margin: 0 25px $footerHeight 25px;
+    padding: 20px;
   }
 }
 #bbpress-forums { 
-  //margin: $headerHeight 80px 0 80px;
   margin: 10px 0;
   background-color: white;
-  //padding: 40px;
   min-height: 550px;
+  padding: 20px;
 }
 .bbpress-forumsMargin {
   margin: $headerHeight 80px 150px 80px !important;
   padding: 40px;
+  @include media ("(max-width: #{$screen-md})"){
+    margin: 0px 25px 150px 25px !important;
+    padding: 40px 0 0 0;
+  }
 }
 .button {
   background-color: $brandYellow;
   text-transform: uppercase;
-  font-family: $roboto-mono;
+  font-family: $oswald;
   border: 0;
-  //font-size: 1em;
   height: auto;
   width: auto;
   padding: 7px 20px;
@@ -586,7 +636,21 @@ FORUM PAGE
 }
 #bbp_search {
   height: 32px;
-
+  @include media ("(max-width: #{$screen-sm})"){
+    width: 100%!important;
+  }
+}
+#bbp_search_submit {
+  @include media ("(max-width: #{$screen-sm})"){
+    width: 100%!important;
+    padding: 8px!important;
+    margin-top: 5px!important;
+  }
+}
+#bbpress-forums div.bbp-search-form {
+  @include media ("(max-width: #{$screen-sm})"){
+    float: unset!important;
+  }
 }
 .headingForumRow {
   margin-bottom: 20px;
@@ -611,6 +675,10 @@ FORUM PAGE
   font-family: $oswald;
   font-size: 18px;
   letter-spacing: 1px;
+  @include media ("(max-width: #{$screen-sm})"){
+    letter-spacing: 0;
+    font-size: 14px;
+  }
 }
 #subscription-toggle {
   float: right;
@@ -641,7 +709,6 @@ FORUM PAGE
 .bbp-body {
   font-size: 14px;
 }
-
 /*-----------------------
 PROFILE PAGE
 -----------------------*/
@@ -705,7 +772,7 @@ PROFILE PAGE
   border: 0!important;
   border-radius: 5px;
   font-size: 1em;
-  //padding: 7px 12px;
+  padding: 7px 12px;
   background-color: $brandPink;
   color: black;
   margin: 0;
@@ -715,6 +782,23 @@ PROFILE PAGE
 #messages_search {
   height: 32px;
 }
+#buddypress div.item-list-tabs ul li {
+  @include media ("(max-width: #{$screen-sm})"){
+    width: 100%;
+  }
+}
+#activity-filter-select {
+  @include media ("(max-width: #{$screen-sm})"){
+    margin: 10px 0!important;
+  }
+}
+//without following, buttons go on top of each other
+@media only screen and (max-width: 420px){
+  #buddypress div.activity-meta a {
+    display: block;
+    margin: 5px 0;
+  }
+}
 /*-----------------------
 CONTACT PAGE
 -----------------------*/
@@ -722,6 +806,11 @@ CONTACT PAGE
 .leftItemContact {
   padding: 70px 15px;
   text-align: center;
+  background-color: $brandPink;
+  color: $white;
+  a {
+    color: $white;
+  }
   h2 {
     text-transform: uppercase;
     font-family: $oswald;
@@ -737,6 +826,9 @@ CONTACT PAGE
       }
     }
   }
+  @include media ("(max-width: #{$screen-sm})"){
+    padding: 50px 15px;
+  }
 }
 .rightItemContact {
   padding: 100px;
@@ -744,6 +836,9 @@ CONTACT PAGE
   h2 {
     text-transform: uppercase;
     font-family: $oswald;
+  }
+  @include media ("(max-width: #{$screen-sm})"){
+    padding: 50px;
   }
 }
 .wpcf7-form {
@@ -775,18 +870,22 @@ CONTACT PAGE
 }
 .wpcf7-submit {
   padding: 10px 70px;
-  background-color: $brandYellow;
+  background-color: $brandPink;
   font-family: $oswald;
   text-transform: uppercase;
   font-size: 1.1em;
-  color: black;
+  color: white;
   border-radius: 5px;
   border: 0;
+  margin-left: 16px; //to match ajax loader to the right
   cursor: pointer;
   @include ease-animation(0.3s);
   &:hover {
     background-color: darken($brandYellow, 10%);
     color: white;
+  }
+  @include media ("(max-width: #{$screen-sm})"){
+    margin-top: 20px;
   }
 }
 
@@ -830,7 +929,12 @@ INSTAGRAM FEED
     overflow: hidden;
   }
 }
-@media only screen and (max-width: 767px){
+@media only screen and (max-width: 500px){
+  #instafeed {
+    width: 240px;
+  }
+}
+@media only screen and (min-width: 501px) and (max-width: 767px){ 
   #instafeed {
     width: 480px;
   }
@@ -873,12 +977,21 @@ EVENTS
 
 .singleEventContent {
   text-align: center;
-  //margin-bottom: 200px;
 }
 .eventTitle {
   text-transform: uppercase;
   font-family: $oswald;
   margin-bottom: 30px;
+}
+.entry-title {
+  @include media ("(max-width: #{$screen-sm})"){
+    font-size: 1.7em!important;
+  }
+}
+.subTitleEvent {
+  @include media ("(max-width: #{$screen-sm})"){
+    font-weight: 400;
+  }
 }
 .eventTitleList {
   font-size: 1.5em;
@@ -955,6 +1068,14 @@ EVENTS
 }
 .descriptionItemEvent {
   padding: 0 0 0 30px;
+  @include media ("(max-width: #{$screen-sm})"){
+    padding: 10px;
+  }
+}
+.imageItemEvent {
+  @include media ("(max-width: #{$screen-sm})"){
+    display: none;
+  }
 }
 #pp-events-search-toggle {
   background-color: $brandBlue!important;

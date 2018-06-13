@@ -19,10 +19,10 @@ get_header();
 		<div class="featureCaption">
 			<?php if(!is_user_logged_in()) { ?>
 				<h1>We love to speak about code.<br>Welcome in!</h1>
-				<button type="button" class="btn featureBtn pink">Join us!</button>
+				<a href="http://includeher.com.au/register-2/"><button type="button" class="btn featureBtn pink">Join us!</button></a>
 			<?php } else { ?>
 				<h1>Are you being stuck with anything in your code? Ask for help in our forum.</h1>
-				<button type="button" class="btn featureBtn yellow">Forum</button>
+				<a href="http://includeher.com.au/forums/"><button type="button" class="btn featureBtn yellow">Forum</button></a>
 			<?php }?>
 		</div>
 	</div>
@@ -93,7 +93,7 @@ get_header();
 				</div>
 			</div>
 		</div>
-		<div id="instafeed"></div>
+		<div id="instafeed" class="gallery"></div>
 	</div>
 </main>
 

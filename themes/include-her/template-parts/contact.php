@@ -12,7 +12,7 @@ Template Name: Contact Us
 </div>
     <div class="container content">
         <div class="row">
-            <div class="col-md-3 blue leftItemContact">
+            <div class="col-md-3 leftItemContact">
                 <h2>Follow us online</h2>
                 <ul>
                     <li><i class="fas fa-plus"></i><a href="">Instagram</a></li>

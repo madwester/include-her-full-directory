@@ -77,12 +77,18 @@ Background colors main
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: top; }
+  @media (max-width: 767px) {
+    .page-id-76 {
+      background-image: url("../../build/images/background-images/girl-laptop-greenchair-mobile.jpg"); } }
 
 .page-id-78 {
   background-image: url("../../build/images/background-images/signup-page-darker.jpg");
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: top; }
+  @media (max-width: 767px) {
+    .page-id-78 {
+      background-image: url("../../build/images/background-images/signup-page-darker-mobile.jpg"); } }
 
 .page-id-79 {
   background-color: #E4BCB2; }
@@ -101,6 +107,9 @@ NAVBAR
 -----------------------*/
 .current-menu-item a {
   border-bottom: 1px solid black; }
+  @media (max-width: 991px) {
+    .current-menu-item a {
+      border-bottom: 0; } }
 
 .navbar-light .navbar-toggler {
   color: #000;
@@ -117,7 +126,9 @@ NAVBAR
   height: 120px; }
   @media (max-width: 991px) {
     .navbar {
+      position: relative;
       height: auto;
+      background-color: white;
       top: 0; } }
 
 .navigationSymbol {
@@ -190,21 +201,23 @@ FEATURE (TOP IMAGE ON EVERY PAGE)
     color: #fff;
     font-size: 3.3em;
     letter-spacing: 1px; }
+  @media (max-width: 1580px) {
+    .feature {
+      height: 800px; } }
   @media (max-width: 1200px) {
     .feature {
       height: 600px; } }
   @media (max-width: 991px) {
     .feature {
-      margin-top: 70px;
       height: 600px; } }
   @media (max-width: 767px) {
     .feature {
-      height: 400px; }
+      height: 600px; }
       .feature h1 {
         font-size: 2em; } }
   @media (max-width: 450px) {
     .feature {
-      height: 300px; }
+      height: 500px; }
       .feature h1 {
         font-size: 1.5em; } }
 
@@ -212,18 +225,42 @@ FEATURE (TOP IMAGE ON EVERY PAGE)
   margin: auto; }
 
 .featureHome {
-  background-image: url("../../build/images/feature-image-hp.png"); }
+  background-image: url("../../build/images/featureImagesDefault/feature-image-hp.png"); }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .featureHome {
+      background-image: url("../../build/images/featureImagesDefault/md/feature-image-hp-md.jpg"); } }
+  @media (max-width: 767px) {
+    .featureHome {
+      background-image: url("../../build/images/featureImagesDefault/mobile/feature-image-hp-mobile.jpg"); } }
 
 .featureAbout {
-  background-image: url("../../build/images/feature-image-two-girls.png"); }
+  background-image: url("../../build/images/featureImagesDefault/feature-image-two-girls.png"); }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .featureAbout {
+      background-image: url("../../build/images/featureImagesDefault/md/feature-image-two-girls-md.jpg"); } }
+  @media (max-width: 767px) {
+    .featureAbout {
+      background-image: url("../../build/images/featureImagesDefault/mobile/feature-image-two-girls-mobile.jpg"); } }
 
 .featureContact {
-  background-image: url("../../build/images/feature-image-contact.jpg"); }
+  background-image: url("../../build/images/featureImagesDefault/feature-image-contact.jpg"); }
   .featureContact h1 {
     text-transform: uppercase; }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .featureContact {
+      background-image: url("../../build/images/featureImagesDefault/md/feature-image-contact-md.jpg"); } }
+  @media (max-width: 767px) {
+    .featureContact {
+      background-image: url("../../build/images/featureImagesDefault/mobile/feature-image-contact-mobile.jpg"); } }
 
 .featureEvents {
-  background-image: url("../../build/images/feature-meetup.jpg"); }
+  background-image: url("../../build/images/featureImagesDefault/feature-meetup.jpg"); }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .featureEvents {
+      background-image: url("../../build/images/featureImagesDefault/md/feature-meetup-md.jpg"); } }
+  @media (max-width: 767px) {
+    .featureEvents {
+      background-image: url("../../build/images/featureImagesDefault/mobile/feature-meetup-mobile.jpg"); } }
 
 .featureBtn {
   margin: 30px;
@@ -345,6 +382,9 @@ HOME PAGE
     @media (max-width: 767px) {
       .carousel-item h4 {
         font-size: 1.2em; } }
+  @media (max-width: 767px) {
+    .carousel-item {
+      padding: 30px 50px; } }
 
 /*-----------------------
 ABOUT
@@ -368,6 +408,11 @@ ABOUT
     font-weight: 500; }
   .contentAbout i {
     margin-left: 10px; }
+  @media (max-width: 767px) {
+    .contentAbout {
+      width: 90%;
+      margin: -100px auto 200px auto;
+      padding: 50px 30px 90px 30px; } }
 
 /*-----------------------
 FOOTER
@@ -446,14 +491,26 @@ LOGIN PAGE
   background-color: #222D63 !important;
   color: white !important; }
 
-.tml h2 {
+.tml h2, .tml h3 {
   text-transform: uppercase;
   font-family: "Oswald", sans-serif;
   margin: 0 0 50px 0; }
+  @media (max-width: 767px) {
+    .tml h2, .tml h3 {
+      margin: 0 0 30px 0; } }
 
 .tml p {
   font-family: "Roboto Mono", monospace;
   margin-bottom: 50px; }
+  @media (max-width: 767px) {
+    .tml p {
+      margin-bottom: 20px; } }
+
+@media (max-width: 767px) {
+  .tml {
+    padding: 20px;
+    max-width: 300px;
+    margin: 50px auto 300px auto; } }
 
 #rememberme {
   width: 20px;
@@ -466,6 +523,9 @@ LOGIN PAGE
 .inputReg:focus {
   outline-color: #E4BCB2; }
 
+#wp-submit {
+  width: 100% !important; }
+
 /*-----------------------
 FORUM PAGE
 -----------------------*/
@@ -476,21 +536,27 @@ FORUM PAGE
   min-height: 550px; }
   @media (max-width: 991px) {
     #buddypress {
-      margin-top: 88px; } }
+      margin: 0 25px 200px 25px;
+      padding: 20px; } }
 
 #bbpress-forums {
   margin: 10px 0;
   background-color: white;
-  min-height: 550px; }
+  min-height: 550px;
+  padding: 20px; }
 
 .bbpress-forumsMargin {
   margin: 120px 80px 150px 80px !important;
   padding: 40px; }
+  @media (max-width: 991px) {
+    .bbpress-forumsMargin {
+      margin: 0px 25px 150px 25px !important;
+      padding: 40px 0 0 0; } }
 
 .button {
   background-color: #f8da79;
   text-transform: uppercase;
-  font-family: "Roboto Mono", monospace;
+  font-family: "Oswald", sans-serif;
   border: 0;
   height: auto;
   width: auto;
@@ -499,6 +565,19 @@ FORUM PAGE
 
 #bbp_search {
   height: 32px; }
+  @media (max-width: 767px) {
+    #bbp_search {
+      width: 100% !important; } }
+
+@media (max-width: 767px) {
+  #bbp_search_submit {
+    width: 100% !important;
+    padding: 8px !important;
+    margin-top: 5px !important; } }
+
+@media (max-width: 767px) {
+  #bbpress-forums div.bbp-search-form {
+    float: unset !important; } }
 
 .headingForumRow {
   margin-bottom: 20px; }
@@ -521,6 +600,10 @@ FORUM PAGE
   font-family: "Oswald", sans-serif;
   font-size: 18px;
   letter-spacing: 1px; }
+  @media (max-width: 767px) {
+    .bbp-header {
+      letter-spacing: 0;
+      font-size: 14px; } }
 
 #subscription-toggle {
   float: right; }
@@ -602,6 +685,7 @@ PROFILE PAGE
   border: 0 !important;
   border-radius: 5px;
   font-size: 1em;
+  padding: 7px 12px;
   background-color: #E4BCB2;
   color: black;
   margin: 0;
@@ -611,12 +695,29 @@ PROFILE PAGE
 #messages_search {
   height: 32px; }
 
+@media (max-width: 767px) {
+  #buddypress div.item-list-tabs ul li {
+    width: 100%; } }
+
+@media (max-width: 767px) {
+  #activity-filter-select {
+    margin: 10px 0 !important; } }
+
+@media only screen and (max-width: 420px) {
+  #buddypress div.activity-meta a {
+    display: block;
+    margin: 5px 0; } }
+
 /*-----------------------
 CONTACT PAGE
 -----------------------*/
 .leftItemContact {
   padding: 70px 15px;
-  text-align: center; }
+  text-align: center;
+  background-color: #E4BCB2;
+  color: #fff; }
+  .leftItemContact a {
+    color: #fff; }
   .leftItemContact h2 {
     text-transform: uppercase;
     font-family: "Oswald", sans-serif;
@@ -628,6 +729,9 @@ CONTACT PAGE
       margin: 10px 0; }
       .leftItemContact ul li i {
         margin-right: 10px; }
+  @media (max-width: 767px) {
+    .leftItemContact {
+      padding: 50px 15px; } }
 
 .rightItemContact {
   padding: 100px;
@@ -635,6 +739,9 @@ CONTACT PAGE
   .rightItemContact h2 {
     text-transform: uppercase;
     font-family: "Oswald", sans-serif; }
+  @media (max-width: 767px) {
+    .rightItemContact {
+      padding: 50px; } }
 
 .wpcf7-form {
   margin-top: 30px; }
@@ -663,13 +770,14 @@ CONTACT PAGE
 
 .wpcf7-submit {
   padding: 10px 70px;
-  background-color: #f8da79;
+  background-color: #E4BCB2;
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   font-size: 1.1em;
-  color: black;
+  color: white;
   border-radius: 5px;
   border: 0;
+  margin-left: 16px;
   cursor: pointer;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -679,6 +787,9 @@ CONTACT PAGE
   .wpcf7-submit:hover {
     background-color: #f5cd49;
     color: white; }
+  @media (max-width: 767px) {
+    .wpcf7-submit {
+      margin-top: 20px; } }
 
 /*-----------------------
 404 PAGE
@@ -714,7 +825,11 @@ INSTAGRAM FEED
     height: 230px;
     overflow: hidden; }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 500px) {
+  #instafeed {
+    width: 240px; } }
+
+@media only screen and (min-width: 501px) and (max-width: 767px) {
   #instafeed {
     width: 480px; } }
 
@@ -758,6 +873,14 @@ EVENTS
   text-transform: uppercase;
   font-family: "Oswald", sans-serif;
   margin-bottom: 30px; }
+
+@media (max-width: 767px) {
+  .entry-title {
+    font-size: 1.7em !important; } }
+
+@media (max-width: 767px) {
+  .subTitleEvent {
+    font-weight: 400; } }
 
 .eventTitleList {
   font-size: 1.5em;
@@ -832,6 +955,13 @@ EVENTS
 
 .descriptionItemEvent {
   padding: 0 0 0 30px; }
+  @media (max-width: 767px) {
+    .descriptionItemEvent {
+      padding: 10px; } }
+
+@media (max-width: 767px) {
+  .imageItemEvent {
+    display: none; } }
 
 #pp-events-search-toggle {
   background-color: #222D63 !important;

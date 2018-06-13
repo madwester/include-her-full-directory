@@ -1,4 +1,3 @@
-
 var userFeed = new Instafeed({
     get: 'user',
     userId: '7875003315',
@@ -9,5 +8,17 @@ var userFeed = new Instafeed({
     template: '<div class="instaimg"><li><a href="{{image}}" title="{{caption}}" target="_blank"><img src="{{image}}" alt="{{caption}}"><div class="likes">&hearts; {{likes}}</div></a></li></div>',
 });
 window.addEventListener('load', () => {
-	userFeed.run();
+    userFeed.run();
+});
+window.addEventListener('load', () => {
+    (function() {
+        // This will create a single gallery from all elements that have class "gallery-item"
+        $('.gallery').magnificPopup({
+            type: 'image'
+            , delegate: 'a'
+            , gallery: {
+                enabled: true
+            }
+        });
+    });
 });

@@ -6,6 +6,11 @@ $breakpoints: (
     'xl': (min-width: 1200px)
 ) !default;
 
+//xs = 0-575px
+//sm = 576px - 767px
+//md = 768px - 991px
+//lg = 992px - 1199px
+//lx = 1200px - 
 
 /// Mixin to manage responsive breakpoints
 /// @param {String} $breakpoint - Breakpoint name
