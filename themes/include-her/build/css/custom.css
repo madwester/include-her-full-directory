@@ -77,6 +77,9 @@ Background colors main
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: top; }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .page-id-76 {
+      background-image: url("../../build/images/background-images/girl-laptop-greenchair-md.jpg"); } }
   @media (max-width: 767px) {
     .page-id-76 {
       background-image: url("../../build/images/background-images/girl-laptop-greenchair-mobile.jpg"); } }
@@ -86,6 +89,9 @@ Background colors main
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: top; }
+  @media (min-width: 768px) and (max-width: 991px) {
+    .page-id-78 {
+      background-image: url("../../build/images/background-images/signup-page-darker-md.jpg"); } }
   @media (max-width: 767px) {
     .page-id-78 {
       background-image: url("../../build/images/background-images/signup-page-darker-mobile.jpg"); } }
@@ -112,7 +118,8 @@ NAVBAR
   border-bottom: 1px solid black; }
   @media (max-width: 991px) {
     .current-menu-item a {
-      border-bottom: 0; } }
+      border-bottom: 0;
+      font-weight: 800; } }
 
 .navbar-light .navbar-toggler {
   color: #000;
@@ -133,6 +140,9 @@ NAVBAR
       height: auto;
       background-color: white;
       top: 0; } }
+
+.site-title, .site-description {
+  display: none; }
 
 .navigationSymbol {
   color: #E4BCB2; }
@@ -384,8 +394,8 @@ HOME PAGE
     font-family: "Roboto Mono", monospace; }
     @media (max-width: 767px) {
       .carousel-item h4 {
-        font-size: 1.2em; } }
-  @media (max-width: 767px) {
+        font-size: 1em; } }
+  @media (max-width: 450px) {
     .carousel-item {
       padding: 30px 50px; } }
 
@@ -788,7 +798,7 @@ CONTACT PAGE
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out; }
   .wpcf7-submit:hover {
-    background-color: #f5cd49;
+    background-color: #d79b8c;
     color: white; }
   @media (max-width: 767px) {
     .wpcf7-submit {

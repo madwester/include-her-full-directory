@@ -42,14 +42,14 @@ get_header();
 				</div>
 				<div class="carousel-item pink">
 					<div class="carouselCaption">
-						<h2>Here's a fun fact</h2>
+						<h2>Here's a fact</h2>
 						<h4>Out of every 100 software developers/engineers in <br>Los Angeles, approximately 10-12 are female.</h4>
 					</div>
 				</div>
 				<div class="carousel-item yellow">
 					<div class="carouselCaption">
 						<h2>Did you know that,</h2>
-						<h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem <br>Ipsum has been the industry's.</h4>
+						<h4>Women make up less than 20% of the<br> tech workforce, worldwide.</h4>
 					</div>
 				</div>
 			</div>
@@ -67,14 +67,14 @@ get_header();
 				<div class="homepageItemCaption">
 					<h2>Are you being stuck in your code?</h2>
 					<h5>Ask any of your coding sisters for help.</h5>
-					<button class="homepageBtn homepageBtnYellow">Forum</button>
+					<a href="http://includeher.com.au/forums/"><button class="homepageBtn homepageBtnYellow">Forum</button></a>
 				</div>
 			</div>
 			<div class="homepageItem pink">
 				<div class="homepageItemCaption">
-					<h4>When was the last time you met up with someone to code? Our members regularly organize events, meet up and hackathons to join. 
+					<h4>When was the last time you met up with someone to code? Our members regularly organize events, meetup and hackathons. 
 						Have a look to see when the next one happens around you.</h4>
-					<button class="homepageBtn homepageBtnBlack">Events</button>
+					<a href="http://includeher.com.au/events/"><button class="homepageBtn homepageBtnBlack">Events</button></a>
 				</div>
 			</div>
 		</div>
@@ -82,14 +82,14 @@ get_header();
 			<div class="homepageItem blue">
 				<div class="homepageItemCaption">
 					<h4>Are you curious to hear our story?</h4>
-					<button class="homepageBtn homepageBtnWhite">About</button>
+					<a href="http://includeher.com.au/about/"><button class="homepageBtn homepageBtnWhite">About</button></a>
 				</div>
 			</div>
 			<div class="homepageItem contactItem">
 			<div class="homepageItemCaption">
-					<h2>Have you got any questions or tips on how to improve us?</h2>
+					<h2>Have you got any questions or feedback on how to improve us?</h2>
 					<h5>Your opinios will make a difference.</h5>
-					<button class="homepageBtn homepageBtnGray">Contact</button>
+					<a href="http://includeher.com.au/contact/"><button class="homepageBtn homepageBtnGray">Contact</button></a>
 				</div>
 			</div>
 		</div>

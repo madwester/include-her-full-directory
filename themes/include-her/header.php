@@ -13,12 +13,20 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
-	<link rel="icon" type="image/png" href="build/images/favicons/favicon-includeher1616.png" sizes="16x16">  
-	<link rel="icon" type="image/png" href="build/images/favicons/favicon-includeher3232.png" sizes="32x32">  
-	<link rel="icon" type="image/png" href="build/images/favicons/favicon-includeher.png" sizes="96x96">  			
+	<!--<meta charset="<?php //bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">-->
+	<meta charset="UTF-8">
+	<meta property="og:url"           content="includeher.com.au" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="Include Her - Where developers meet" />
+	<meta property="og:description"   content="Include her is an online community where developers meet." />
+	<meta property="og:image" content="<?php bloginfo('template_directory')?>/build/images/dark-mockup-2.jpg">
+	<!--<meta property="og:image:width" content="200">
+	<meta property="og:image:height" content="200">-->
+	<meta name="description" content="Include her is an online community where developers meet.">
+	<meta name="keywords" content="girls, female, women, code, coding, developer">
+	<meta name="author" content="Madeleine Westerstrom">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<?php wp_head(); ?>
 </head>
 

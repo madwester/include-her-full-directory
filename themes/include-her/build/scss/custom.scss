@@ -92,6 +92,9 @@ Background colors main
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: top;
+  @include media ("(min-width: #{$screen-sm + 1}) and (max-width: #{$screen-md})") {
+    background-image: url('../../build/images/background-images/girl-laptop-greenchair-md.jpg');
+  }
   @include media ("(max-width: #{$screen-sm})") {
     background-image: url('../../build/images/background-images/girl-laptop-greenchair-mobile.jpg');
   }
@@ -102,6 +105,9 @@ Background colors main
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: top;
+  @include media ("(min-width: #{$screen-sm + 1}) and (max-width: #{$screen-md})") {
+    background-image: url('../../build/images/background-images/signup-page-darker-md.jpg');
+  }
   @include media ("(max-width: #{$screen-sm})") {
     background-image: url('../../build/images/background-images/signup-page-darker-mobile.jpg');
   }
@@ -132,6 +138,7 @@ NAVBAR
     border-bottom: 1px solid black;
     @include media ("(max-width: #{$screen-md})") {
       border-bottom: 0;
+      font-weight: 800;
     }
   }
 }
@@ -149,6 +156,7 @@ NAVBAR
   background-color: rgba(255, 255, 255, 0.9); 
   padding: 15px 25px;
   height: $headerHeight;
+  //overflow-x: hidden;
   //will change when going past 991px
   @include media ("(max-width: #{$screen-md})") {
     position: relative;
@@ -156,6 +164,9 @@ NAVBAR
     background-color: white;
     top: 0;
   }
+}
+.site-title, .site-description {
+  display: none;
 }
 .navigationSymbol {
   color: $brandPink;
@@ -438,10 +449,10 @@ HOME PAGE
   h4 {
     font-family: $roboto-mono;
     @include media ("(max-width: #{$screen-sm})"){
-      font-size: 1.2em;
+      font-size: 1em;
     }
   }
-  @include media ("(max-width: #{$screen-sm})"){
+  @include media ("(max-width: #{$screen-xs})"){
     padding: 30px 50px;
   }
 }
@@ -884,7 +895,7 @@ CONTACT PAGE
   cursor: pointer;
   @include ease-animation(0.3s);
   &:hover {
-    background-color: darken($brandYellow, 10%);
+    background-color: darken($brandPink, 10%);
     color: white;
   }
   @include media ("(max-width: #{$screen-sm})"){
@@ -1120,4 +1131,12 @@ EVENTS
 .warning {
   background-color: #fefbf2!important;
 	border-color: $brandYellow!important; /*brandYellow*/
+}
+
+/*-----------------------
+GENERAL OVERRIDES
+-----------------------*/
+
+#buddypress .standard-form label, #buddypress .standard-form legend, #buddypress .standard-form span.label {
+  font-weight: 400!important;
 }

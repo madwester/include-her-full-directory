@@ -20,9 +20,8 @@
         </div>
         <div class="itemFoot align-right">
           <ul class="socialMediaList">
-            <li><i class="fab fa-instagram"></i></li>
-            <li><i class="fab fa-facebook-f"></i></li>
-            <li><i class="fab fa-google"></i></li>
+            <li><a href="https://www.facebook.com/Include-Her-422232668245105/?modal=admin_todo_tour"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://www.instagram.com/includeherau"><i class="fab fa-facebook-f"></i></a></li>
           </ul>
         </div>
       </div>

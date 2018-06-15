@@ -133,6 +133,17 @@ function include_her_widgets_init() {
 }
 add_action( 'widgets_init', 'include_her_widgets_init' );
 
+//show admin bar for only admin users
+function remove_admin_bar() {
+
+    if( current_user_can( 'manage_options' ) )
+        return true;
+
+    return false;
+
+}
+add_filter( 'show_admin_bar' , 'remove_admin_bar' );
+
 /**
  * Enqueue scripts and styles.
  */
